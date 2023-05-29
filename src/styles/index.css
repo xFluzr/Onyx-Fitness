@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --background:#FCFCFE;
+    --light-gray:#B1AFB2;
+    --pink:#D7337A;
+    --dark:#2E2B2B;
+    --light-purple:#B5A9F2;
+    --purple:#6F55F2;
+}
