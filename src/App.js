@@ -9,6 +9,7 @@ const App = () => {
       <h1>Onyx Fitness</h1>
       <FontAwesomeIcon icon={faDumbbell} />
       <FontAwesomeIcon icon={faFaceLaugh} />
+      <p>Testuje gita</p>
     </>
   )
 }
