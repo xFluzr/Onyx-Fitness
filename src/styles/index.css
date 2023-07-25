@@ -12,3 +12,9 @@
     --light-purple:#B5A9F2;
     --purple:#6F55F2;
 }
+
+.container{
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+}
