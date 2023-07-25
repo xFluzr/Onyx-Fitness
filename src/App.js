@@ -6,7 +6,6 @@ const App = () => {
   return (
     <>
       <Home />
-      DUPa TESTOWA PLEASE DZIALAJ MUSIZE 
     </>
   )
 }
