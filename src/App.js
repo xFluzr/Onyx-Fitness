@@ -1,11 +1,15 @@
 import React from 'react'
 import Home from './pages/Home';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
- 
+import Navbar from './components/nav/Navbar';
+import { BrowserRouter } from 'react-router-dom';
+
 const App = () => {
   return (
     <>
-      <Home />
+      <BrowserRouter>
+        <Navbar />
+        <Home />
+      </BrowserRouter>
     </>
   )
 }

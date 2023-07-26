@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -9,8 +11,13 @@
     --light-gray:#B1AFB2;
     --pink:#D7337A;
     --dark:#2E2B2B;
+    --super-light-purple:#F3F0FF;
     --light-purple:#B5A9F2;
     --purple:#6F55F2;
+}
+
+img{
+    width: 100%;
 }
 
 .container{
