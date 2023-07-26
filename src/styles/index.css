@@ -12,9 +12,14 @@
     --light-purple:#B5A9F2;
     --purple:#6F55F2;
 }
+body{
+    background-color: var(--background);
+}
 
 .container{
     margin: 0 auto;
     max-width: 1440px;
     width: 100%;
+    height: 100%;
+    position: relative;
 }
