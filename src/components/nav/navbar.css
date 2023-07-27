@@ -12,8 +12,9 @@
     padding: 4px 12px;
     display: flex;
     align-items: center;
-    justify-content: center;;
+    justify-content: center;
     transition: all 300ms ease;
+    z-index: 999;
 }
 
 .navbar__placeholder{
