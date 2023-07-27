@@ -1,13 +1,13 @@
 #landing{
-    height: 95vh;
+    height: 94vh;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .landing-context{
-    float:left;
-    min-width: 37.5%;
     display: flex;
+    position: absolute;
+    z-index: 20;
     flex-direction: column;
-    margin: 10% 2rem 4rem 2rem;
+    padding: 8rem 2rem ;
     height: 100%;
 }
 .landing-title{
@@ -15,6 +15,7 @@
 }
 .landing-title h1{
     font-size: 4rem;
+    width: 80%;
     color: var(--dark);
 }
 
@@ -36,30 +37,30 @@
     margin-top: 0.5em;
 }
 
-
 .landing-image{
-    float: right;
     position: absolute;
     top:3rem;
-    right: 2rem;
-    max-width:60%;
+    z-index: 1;
+    right: 0rem;
+    min-width: 40%;
+    max-width: 50%;
 }
 
 .nav-arrow{
     position: absolute;
-    bottom: 1rem;
-    right:3rem;
-    font-size: 1.3rem;
+    bottom: 3rem;
+    right:48%;
+    font-size: 1.5rem;
     font-weight: 1000;
-    background-color: var(--purple);
-    color: var(--background);
-    padding: 1.4em;
+    color: var(--purple);
+    padding: 1.1em 1.3em;
     border-radius: 50%;
     transition: 0.3s all ease;
     
 }
 .nav-arrow:hover{
     cursor: pointer;
+    border: 1px solid var(--purple);
     transform: translateY(10px) ;
     
 }
@@ -67,20 +68,25 @@
 
  /* MOBILE LOOK */
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:800px) {
     #landing{
         height: auto;
     }
    
     .landing-context{
-        float: none;
-        margin: 2rem 1rem;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        max-width: 100%;
+        text-align: center;
+        display: block;
+        position: initial;
         justify-content: center;
         align-items: center;
         width: 100%;
     }
     .landing-title h1{
         font-size: 2.5rem;
+        width: 100%;
     }
     .landing-title h2{
         font-size: 1.75rem;
@@ -88,28 +94,19 @@
     .landing-text{
         font-size: 1.25rem;
     }
-    .landing-image-wrapper{
-        height: 100%;
-        width: 100%;
-        margin: 0 auto;
-        display: block;
-    }
+   
     .landing-image{
-        float: none;
-        max-width: 100%;
+        width:100%;
+        padding: 0 6rem;
+        margin: 0 auto;
         position: initial;
-        display:block;
-        
-        
+        max-width: 100%;
     }
     .nav-arrow{
         display: none;
     }
 }
 @media screen and (max-width:500px){
-    .landing-context{
-        margin: 1rem .5rem;
-    }
     .landing-title h1{
         font-size: 2rem;
     }
@@ -118,5 +115,8 @@
     }
     .landing-text{
         font-size: 1rem;
+    }
+    .landing-image{
+        padding:0rem 4rem;
     }
 }

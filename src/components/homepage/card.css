@@ -1,0 +1,70 @@
+.card{
+    margin: 2rem 0;
+    padding: 0 1rem;
+    width: 18rem ;
+    height: 22rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    -webkit-box-shadow: 0px 15px 33px -14px rgba(143, 143, 157, 1);
+    -moz-box-shadow: 0px 15px 33px -14px rgba(143, 143, 157, 1);
+    box-shadow: 0px 15px 33px -14px rgba(143, 143, 157, 1);
+}
+.icon{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin: 1rem 0;
+    -webkit-box-shadow: -5px 21px 35px -25px rgba(46, 43, 43, 1);
+    -moz-box-shadow: -5px 21px 35px -25px rgba(46, 43, 43, 1);
+    box-shadow: -5px 21px 35px -25px rgba(46, 43, 43, 1);
+}
+.card-title{
+    text-align: center;
+    font-size: 2.25rem;
+    color: var(--dark);
+}
+.card-description{
+    text-align: center;
+    color: var(--light-gray);
+    margin: 1.5rem 0;
+}
+
+@media screen and (max-width:800px) {
+    .card{
+        width: 80%;
+        margin: 1rem 0;
+        padding: 0 3rem;
+        height: auto;
+    }
+    .icon{
+        width: 5rem;
+        height: 5rem;
+    }
+    .card-title{
+        font-size: 1.75rem;
+    }
+    .card-description{
+        margin: 1.5rem auto;
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:500px) {
+    .icon{
+        width: 4rem;
+        height: 4rem;
+    }
+    .card-title{
+        font-size: 1.5rem;
+    }
+    .card-description{
+        margin: 1.5rem auto;
+        font-size: .75rem;
+    }
+}

@@ -8,7 +8,7 @@
   z-index: 1;
   background: #e8e8e8;
   position: relative;
-  font-weight: 1000;
+  font-weight: bold;
   -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   transition: all 250ms;
@@ -61,17 +61,17 @@
   background-color: var(--purple);
   color: var(--background);
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .btn {
     padding: 0.75em 1.5rem;
     margin-right: 0.75rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 500px) {
   .btn {
     padding: 0.5em 1.5rem;
     margin-right: 0.75rem;
-    font-size: 1.1rem;
+    font-size: .9rem;
   }
 }

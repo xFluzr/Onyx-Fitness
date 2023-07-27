@@ -1,0 +1,50 @@
+#our-approach{
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.our-approach-title{
+    text-align: center;
+    font-size: 4rem;
+}
+.our-approach-text{
+    margin: 2rem auto;
+    font-size: 1.25rem;
+    color: var(--light-gray);
+    text-align: center;
+    max-width: 60%;
+}
+.card-list{
+    display:flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* MOBILE */
+@media screen and (max-width:800px) {
+    .card{
+        width: 90%;
+    }
+    #our-approach{
+        height: auto;
+    }
+    .our-approach-title{
+        padding: 4rem 0 0 0;
+        font-size: 2.5rem;
+    }
+    .our-approach-text{
+        margin: 1rem auto;
+        padding: 0 1rem;
+        font-size: 1.25rem;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:500px){
+    .our-approach-title{
+        font-size: 2rem;
+    }
+    .our-approach-text{
+        font-size: 1rem;
+    }
+}
