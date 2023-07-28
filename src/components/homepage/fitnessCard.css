@@ -1,0 +1,106 @@
+.fitness-card{
+    padding: 1.125rem 0.750rem;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border-radius: 0.250rem;
+    -webkit-box-shadow: 1px 1px 11px -2px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 1px 1px 11px -2px rgba(66, 68, 90, 1);
+    box-shadow: 1px 1px 8px -2px rgba(66, 68, 90, 0.479);
+}
+
+.fitness-card__top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fitness-card__title{
+    font-size: 1.250rem;
+    margin-top: 0.375rem;
+}
+
+.fitness-card__category{
+    color: var(--pink);
+}
+
+.fitness-card__level,
+.fitness-card__category,
+.fitness-card__register{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.fitness-card__register{
+    color: var(--purple);
+}
+
+.fitness-card__middle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fitness-card__icon{
+    width: 20%;
+    filter: invert(80%) sepia(17%) saturate(2985%) hue-rotate(195deg) brightness(97%) contrast(96%);
+}
+
+.fitness-card__img--wrapper{
+    padding-bottom: calc(250 / 300  * 100%);
+    margin-top: 0.5rem;
+    display: flex;
+    position: relative;
+}
+
+.fitness-card__img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+    .fitness-card__category,
+    .fitness-card__level,
+    .fitness-card__register{
+        font-size: 0.875rem;
+    }
+
+    .fitness-card__title{
+        font-size: 1.125rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .fitness-card{
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+
+    .fitness-card__category,
+    .fitness-card__level,
+    .fitness-card__register{
+        font-size: 1rem;
+    }
+
+    .fitness-card__title{
+        font-size: 1.250rem;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .fitness-card{
+        width: 75%;
+        margin-bottom: 2rem;
+    }
+
+    .fitness-card__category,
+    .fitness-card__level,
+    .fitness-card__register{
+        font-size: 0.85rem;
+    }
+
+    .fitness-card__title{
+        font-size: 1.125rem;
+    }
+}

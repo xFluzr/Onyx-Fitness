@@ -1,0 +1,64 @@
+#joyfull{
+    margin: 1rem 0;
+}
+
+.joyfull__box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#joyfull .section__title{
+    text-align: center;
+}
+
+#joyfull .section__text{
+    margin-top: 1.125rem;
+    text-align: center;
+}
+
+.joyfull__cards{
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin-top: 3.725rem;
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .joyfull__cards{
+        width: 90%;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .joyfull__cards{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .joyfull__cards{
+        margin-bottom: 0;
+    }
+
+    #joyfull .section__text{
+        margin-top: 1rem;
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #joyfull .section__text{
+        margin-top: 1rem;
+        max-width: 70%;
+    }
+}
+
+
+
