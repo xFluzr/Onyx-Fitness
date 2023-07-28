@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root{
@@ -9,6 +12,7 @@
     --light-gray:#B1AFB2;
     --pink:#D7337A;
     --dark:#2E2B2B;
+    --super-light-purple:#F3F0FF;
     --light-purple:#B5A9F2;
     --purple:#6F55F2;
 }
@@ -16,10 +20,66 @@ body{
     background-color: var(--background);
 }
 
+img{
+    width: 100%;
+}
+
 .container{
     margin: 0 auto;
     max-width: 1440px;
     width: 100%;
-    height: 100%;
     position: relative;
 }
+
+.heading-pink{
+    color:var(--pink)
+}
+
+.section__title{
+    font-size: 2.250rem;
+    letter-spacing: 0.125rem;
+    line-height: 1.3;
+}
+
+.section__text{
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+@media screen and (max-width: 1024px) {
+    .section__title{
+        font-size: 2rem;
+    }
+    
+    .section__text{
+        font-size: 0.850rem;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .section__title{
+        font-size: 1.875rem;
+    }
+    
+    .section__text{
+        font-size: 0.750rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section__title{
+        font-size: 1.375rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .section__title{
+        font-size: 1.125rem;
+        letter-spacing: 1px;
+    }
+}
+
+

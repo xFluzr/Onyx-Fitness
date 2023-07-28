@@ -1,11 +1,17 @@
 import React from 'react'
 import Home from './pages/Home';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
- 
+import Navbar from './components/nav/Navbar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 const App = () => {
   return (
     <>
-      <Home />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />}/>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
