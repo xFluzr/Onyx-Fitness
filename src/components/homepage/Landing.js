@@ -12,15 +12,14 @@ const Landing = () => {
         <div className="landing-context">
           <div className="landing-title">
             <h1>
-              <span className="heading-pink">Body</span> and{" "}
-              <span className="heading-pink">Mind</span>
+              <span className="heading-pink">Body</span> and
+              <span className="heading-pink"> Mind</span>
             </h1>
             <h2>in perfect balance</h2>
           </div>
           <p className="landing-text">
             Take care of your own body
-            <br /> don't wait the perfect time
-            <br /> to start is now
+            <br /> don't wait the perfect time to start is now
           </p>
           <div className="landing-action">
             <Button text="Get Started" type="button" isBackground={true} />
@@ -33,7 +32,7 @@ const Landing = () => {
             src={LandingImage}
             alt="training-woman"
           />
-          <a href="#" className="nav-arrow">
+          <a href="#our-approach" className="nav-arrow">
             <FontAwesomeIcon icon={faArrowDown} />
           </a>
         
