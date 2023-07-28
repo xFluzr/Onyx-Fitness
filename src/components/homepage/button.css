@@ -1,9 +1,9 @@
 .btn {
-  padding: .5em 1em;
+  padding: .75em 2em;
   margin: 0 1rem 1rem 0;
   font-size: 1.5rem;
   border: unset;
-  border-radius: 15px;
+  border-radius: 8px;
   color: #212121;
   z-index: 1;
   background: #e8e8e8;
@@ -61,17 +61,27 @@
   background-color: var(--purple);
   color: var(--background);
 }
+
+
+
 @media screen and (max-width: 800px) {
   .btn {
     padding: 0.75em 1.5rem;
     margin-right: 0.75rem;
     font-size: 1rem;
   }
+
+  .join-me{
+    margin: 0;
+    padding: 1rem 0;
+    font-size: 1.25rem;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 500px) {
   .btn {
-    padding: 0.5em 1.5rem;
+    padding: 0.75em 1.5em;
     margin-right: 0.75rem;
-    font-size: .9rem;
+    font-size: 1rem;
   }
 }
