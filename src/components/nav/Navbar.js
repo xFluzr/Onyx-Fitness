@@ -9,13 +9,16 @@ import Logo from "../../assets/logoname.svg";
 
 const Navbar = () => {
 
+    //ilość przescrollowanej strony
     const [LastScrollPosition, setLastScrollPosition] = useState(0);
 
+    //funkcja odpowiada za dodawanie i zabieranie kalsy otwierającej menu
     const toggleMobileMenu = () => {
         document.body.classList.toggle("menu-is-open");
     }
 
     useEffect(() => {
+        //funkcja zmieniająca wysokość navbara w zależności w którą stronę jest scrollowana strona
         const handleScroll = () => {
             const navbar = document.querySelector("nav");
             const navbarPlaceholder = document.querySelector(".navbar__placeholder");
