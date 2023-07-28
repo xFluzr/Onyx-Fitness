@@ -9,7 +9,7 @@ const Landing = () => {
   return (
     <section id="landing">
       <div className="container">
-        <div className="landing-context">
+        <div className="landing-content">
           <div className="landing-title">
             <h1>
               <span className="heading-pink">Body</span> and

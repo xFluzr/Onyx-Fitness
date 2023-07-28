@@ -2,7 +2,7 @@
     height: 94vh;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.landing-context{
+.landing-content{
     display: flex;
     position: absolute;
     z-index: 20;
@@ -73,7 +73,7 @@
         height: auto;
     }
    
-    .landing-context{
+    .landing-content{
         margin: 2rem auto;
         padding: 0 1rem;
         max-width: 100%;
