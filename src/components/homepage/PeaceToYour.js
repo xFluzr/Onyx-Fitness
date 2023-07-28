@@ -35,7 +35,7 @@ const PeaceToYour = () => {
                   
                 </li>
               </ul>
-              <Button type={"button"} isBackground={true} text={"Join Me"} additionalClasses="join-me"/>
+              <Button type={"button"} isBackground={true} text={"Join Me"} additionalClasses="btn-lg"/>
             </div>
             </div>
             

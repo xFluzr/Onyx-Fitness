@@ -1,19 +1,19 @@
 #peace-to-your{
-    height: 70vh;
+    height: auto;
     width: 100%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .section-wrapper{
     display: flex;
+    flex-wrap: wrap;
 }
 .section-image{
-    max-width: 100%;
-  
+    max-width: 50%;
+    order:1;
 }
 .section-content{
-    max-width: 80%;
+    max-width: 50%;
     padding: 2rem;
-    
+    order:2;
 }
 .section-title{
     font-size:4rem;
@@ -56,7 +56,26 @@
 
 
 /* MOBILE LOOK */
+@media screen and (max-width:1024px){
+    .section-image{
+        max-width: 80%;
+        margin: 0 auto;
+        
+    }
+    .section-content{
+        max-width: 100%;
+        text-align:center;
+        align-items: center;
+    }
+    .yoga-advantage{
+        margin:1.5rem auto;
+        justify-content: center;
+        
+    }
+}
+
 @media screen and (max-width:800px) {
+   
     .section-wrapper{
         flex-direction: column;
         width: 100%;
@@ -67,12 +86,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        order:1;
+        order:2;
     }
     .section-image{
         max-width: 100%;
         padding: 0 6rem;
-        order: 2;
+        order: 1;
     }
     .section-title{
         text-align: center;

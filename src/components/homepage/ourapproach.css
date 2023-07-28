@@ -1,6 +1,6 @@
 #our-approach{
-    height: 100vh;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 6rem;
+    height: auto;
 }
 .our-approach-title{
     text-align: center;
@@ -40,7 +40,7 @@
     }
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:512){
     .our-approach-title{
         font-size: 2rem;
     }
