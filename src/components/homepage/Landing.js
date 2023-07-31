@@ -1,7 +1,6 @@
 import React from "react";
 import "./landing.css";
 import Button from "./Button";
-import LandingImage from "../../assets/homepage/hp2.png";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -28,6 +27,7 @@ const Landing = () => {
             </div>
           </div>
           <div className="landing__image--wrapper">
+
           </div>
           <a href="#our-approach" className="nav-arrow">
             <FontAwesomeIcon icon={faArrowDown} />
