@@ -1,0 +1,130 @@
+#peace-to-your{
+    height: auto;
+    width: 100%;
+}
+.section-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-image{
+    max-width: 50%;
+    order:1;
+}
+.section-content{
+    max-width: 50%;
+    padding: 2rem;
+    order:2;
+}
+.section-title{
+    font-size:4rem;
+}
+.section-subtitle{
+    font-size: 2rem;
+    color: var(--dark);
+}
+.line{
+    margin: 2rem 0;
+}
+.instructor-description{
+    color:var(--light-gray);
+    font-size: 1.25rem;
+}
+.yoga-advantages{
+    list-style: none;
+    margin: 2rem 0;
+}
+.yoga-advantage{
+    display: flex;
+    margin:1.5rem 0;
+    align-items: center;
+}
+.advantage-icon{
+    max-width: 6rem;
+}
+.advantage-content{
+    margin: 1rem 1.5rem;
+    text-align: center;
+}
+.advantage-title{
+    font-size: 1.75rem;
+    color:var(--dark);
+}
+.advantage-description{
+    font-size: .75rem;
+}
+
+
+
+/* MOBILE LOOK */
+@media screen and (max-width:1024px){
+    .section-image{
+        max-width: 80%;
+        margin: 0 auto;
+        
+    }
+    .section-content{
+        max-width: 100%;
+        text-align:center;
+        align-items: center;
+    }
+    .yoga-advantage{
+        margin:1.5rem auto;
+        justify-content: center;
+        
+    }
+}
+
+@media screen and (max-width:800px) {
+   
+    .section-wrapper{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .section-content{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order:2;
+    }
+    .section-image{
+        max-width: 100%;
+        padding: 0 6rem;
+        order: 1;
+    }
+    .section-title{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .section-subtitle{
+        text-align: center;
+        font-size: 1.25rem;
+    }
+    .line{
+        margin: 1rem 0;
+    }
+    .instructor-description{
+        text-align: center;
+        font-size: .75rem;
+    }
+    .yoga-advantage{
+        justify-content: center;
+        margin: 0.75rem 0;
+    }
+    .advantage-icon{
+        max-width: 4rem;
+    }
+    .advantage-title{
+        font-size: 1.5rem;
+    }
+    .advantage-description{
+        font-size: 1rem;
+    }
+    .section-content a{
+        width: 90%;
+    }
+    .advantage-title{
+        font-size: 1rem;
+    }
+}
