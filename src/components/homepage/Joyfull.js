@@ -47,7 +47,10 @@ const Joyfull = () => {
                             icon={icon2}
                         />
                     </div>
-                    <Button text={"See all courses"} type={"button"} additionalClasses="btn-lg"/>
+                    <Button 
+                        text="See all Courses"
+                        link="#"
+                    />
                 </div>
             </div>
         </section>

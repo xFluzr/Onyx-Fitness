@@ -1,9 +1,8 @@
 .btn {
-  padding: .75em 2em;
-  margin: 0 1rem 1rem 0;
+  padding: .5em 1em;
   font-size: 1.5rem;
-  border: unset;
-  border-radius: 8px;
+  border: none;
+  border-radius: 0.25rem;
   color: #212121;
   z-index: 1;
   background: #e8e8e8;
@@ -11,9 +10,10 @@
   font-weight: bold;
   -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
-  transition: all 250ms;
+  transition: all 250ms ease;
   overflow: hidden;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn::before {
@@ -23,13 +23,14 @@
   left: 0;
   height: 100%;
   width: 0;
-  border-radius: 15px;
+  border-radius: 0.25rem;
   background-color: var(--background);
   z-index: -1;
   -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   transition: all 250ms;
 }
+
 .btn:hover {
   color: #e8e8e8;
 }
@@ -37,11 +38,13 @@
 .btn:hover::before {
   width: 100%;
 }
+
 .background {
   background-color: var(--purple);
   color: var(--background);
   border: 2px solid var(--purple);
 }
+
 .background:hover {
   background-color: var(--background);
   border: 2px solid var(--purple);
@@ -51,6 +54,7 @@
 .btn.no-background::before {
   background-color: var(--purple);
 }
+
 .no-background {
   background-color: var(--background);
   border: 2px solid var(--purple);
@@ -62,26 +66,15 @@
   color: var(--background);
 }
 
-
-
 @media screen and (max-width: 800px) {
   .btn {
     padding: 0.75em 1.5rem;
-    margin-right: 0.75rem;
     font-size: 1rem;
-  }
-
-  .btn-lg{
-    margin: 0;
-    padding: 1rem 0;
-    font-size: 1.25rem;
-    width: 100%;
   }
 }
 @media screen and (max-width: 500px) {
   .btn {
-    padding: 0.75em 1.5em;
-    margin-right: 0.75rem;
-    font-size: 1rem;
+    padding: 0.5em 1.5rem;
+    font-size: .9rem;
   }
 }
