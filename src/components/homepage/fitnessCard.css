@@ -50,6 +50,7 @@
     margin-top: 0.5rem;
     display: flex;
     position: relative;
+    overflow: hidden;
 }
 
 .fitness-card__img{
@@ -57,6 +58,11 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    transition: 300ms ease all;
+}
+
+.fitness-card:hover .fitness-card__img{
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 1024px) {

@@ -1,8 +1,6 @@
 import React from "react";
 import "./landing.css";
 import Button from "./Button";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Landing = () => {
   return (
@@ -22,16 +20,13 @@ const Landing = () => {
               <br /> don't wait the perfect time to start is now
             </p>
             <div className="landing-action">
-              <Button text="Get Started" type="button" isBackground={true} />
-              <Button text="Read More" type="button" isBackground={false} />
+              <Button text="Get Started" link="#" />
+              <Button text="Read More" isBackground={false} link="#"/>
             </div>
           </div>
           <div className="landing__image--wrapper">
 
           </div>
-          <a href="#our-approach" className="nav-arrow">
-            <FontAwesomeIcon icon={faArrowDown} />
-          </a>
         </div>
       </div>
     </section>

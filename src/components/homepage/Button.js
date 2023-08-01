@@ -1,19 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./button.css";
 
-const Button = ({ type, text, isBackground = true ,link="#"}) => {
+const Button = ({ text, isBackground = true , link="#"}) => {
   return (
-    <>
-    <a href={link}>
-      <button
-      type={type}
+    <Link 
+      to={link}  
       className={`${isBackground ? "background" : "no-background"} btn`}
-      >
-      {text}
-      </button>
-    </a>
-    </>
-   
+    >
+      {
+        text
+      }
+    </Link>
   );
 };
 

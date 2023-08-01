@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -16,6 +20,7 @@
     --light-purple:#B5A9F2;
     --purple:#6F55F2;
 }
+
 body{
     background-color: var(--background);
 }
@@ -64,7 +69,7 @@ img{
     }
     
     .section__text{
-        font-size: 0.750rem;
+        font-size: 1rem;
     }
 }
 
