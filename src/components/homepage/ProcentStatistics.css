@@ -1,0 +1,40 @@
+.procent-statistics__box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.procent-statistics__header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.procent-statistics__name,
+.procent-statistics__number{
+    font-size: 1rem;
+    display: block;
+    font-weight: 500;
+}
+
+.procent-statistics__bar{
+    background-color: var(--light-purple);
+    height: 10px;
+    border-radius: 0.250rem;
+    width: 100%;
+    margin-bottom: 3.5%;
+    display: flex;
+}
+
+.procent-statistics__proggres{
+    height: 100%;
+    border-radius: 0.250rem;
+    background-color: var(--purple);
+}
+
+@media screen and (max-width: 1024px) {
+    .procent-statistics__name,
+    .procent-statistics__number{
+        font-size: 0.875rem;
+    }
+}
