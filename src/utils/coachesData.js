@@ -20,13 +20,13 @@ import trener8 from "../assets/coaches/trener8.jpg";
 import trener9 from "../assets/coaches/trener9.jpg";
 import trener10 from "../assets/coaches/trener10.jpg";
 
-export const coachesData = [
+const coachesData = [
     {
         name: "Chris Bumstead",
         discipline: "Bodybuilding",
         icon: face10,
         image: trener10,
-        description: "",
+        description: "As a specialized personal trainer in bodybuilding, your work revolves around sculpting not only bodies but also empowering individuals with the strength and confidence they desire. With your expert guidance, clients embark on a transformative journey towards muscle development and physical prowess. Your tailored workout regimens and comprehensive training techniques ensure that each client's unique goals are not just met, but exceeded. Beyond the gym, you provide invaluable insights into nutrition, recovery, and lifestyle adjustments that harmonize with the demands of bodybuilding",
         link: "chris_bumstead" 
     },
     {
@@ -34,7 +34,7 @@ export const coachesData = [
         discipline: "Bodybuilding",
         icon: face9,
         image: trener9,
-        description: "",
+        description: "As a specialized personal trainer in bodybuilding, your work revolves around sculpting not only bodies but also empowering individuals with the strength and confidence they desire. With your expert guidance, clients embark on a transformative journey towards muscle development and physical prowess. Your tailored workout regimens and comprehensive training techniques ensure that each client's unique goals are not just met, but exceeded. Beyond the gym, you provide invaluable insights into nutrition, recovery, and lifestyle adjustments that harmonize with the demands of bodybuilding",
         link: "michal_sakowski" 
     },
     {
@@ -42,7 +42,7 @@ export const coachesData = [
         discipline: "Fitness",
         icon: face7,
         image: trener7,
-        description: "",
+        description: "As a specialized personal trainer in bodybuilding, your work revolves around sculpting not only bodies but also empowering individuals with the strength and confidence they desire. With your expert guidance, clients embark on a transformative journey towards muscle development and physical prowess. Your tailored workout regimens and comprehensive training techniques ensure that each client's unique goals are not just met, but exceeded. Beyond the gym, you provide invaluable insights into nutrition, recovery, and lifestyle adjustments that harmonize with the demands of bodybuilding",
         link: "anna_lewandowska" 
     },
     {
@@ -50,7 +50,7 @@ export const coachesData = [
         discipline: "Bodybuilding",
         icon: face8,
         image: trener8,
-        description: "",
+        description: "As a specialized personal trainer in bodybuilding, your work revolves around sculpting not only bodies but also empowering individuals with the strength and confidence they desire. With your expert guidance, clients embark on a transformative journey towards muscle development and physical prowess. Your tailored workout regimens and comprehensive training techniques ensure that each client's unique goals are not just met, but exceeded. Beyond the gym, you provide invaluable insights into nutrition, recovery, and lifestyle adjustments that harmonize with the demands of bodybuilding",
         link: "noel_deyzel" 
     },
     {
@@ -58,7 +58,7 @@ export const coachesData = [
         discipline: "Gymnastics",
         icon: face6,
         image: trener6,
-        description: "",
+        description: "As a specialized personal trainer in bodybuilding, your work revolves around sculpting not only bodies but also empowering individuals with the strength and confidence they desire. With your expert guidance, clients embark on a transformative journey towards muscle development and physical prowess. Your tailored workout regimens and comprehensive training techniques ensure that each client's unique goals are not just met, but exceeded. Beyond the gym, you provide invaluable insights into nutrition, recovery, and lifestyle adjustments that harmonize with the demands of bodybuilding",
         link: "andrea_larosa" 
     },
     {
@@ -66,7 +66,7 @@ export const coachesData = [
         discipline: "Yoga",
         icon: face1,
         image: trener1,
-        description: "",
+        description: "As a specialized personal trainer in bodybuilding, your work revolves around sculpting not only bodies but also empowering individuals with the strength and confidence they desire. With your expert guidance, clients embark on a transformative journey towards muscle development and physical prowess. Your tailored workout regimens and comprehensive training techniques ensure that each client's unique goals are not just met, but exceeded. Beyond the gym, you provide invaluable insights into nutrition, recovery, and lifestyle adjustments that harmonize with the demands of bodybuilding",
         link: "irene_herman" 
     },
     {
@@ -74,7 +74,7 @@ export const coachesData = [
         discipline: "Yoga",
         icon: face3,
         image: trener3,
-        description: "",
+        description: "As a specialized personal trainer in bodybuilding, your work revolves around sculpting not only bodies but also empowering individuals with the strength and confidence they desire. With your expert guidance, clients embark on a transformative journey towards muscle development and physical prowess. Your tailored workout regimens and comprehensive training techniques ensure that each client's unique goals are not just met, but exceeded. Beyond the gym, you provide invaluable insights into nutrition, recovery, and lifestyle adjustments that harmonize with the demands of bodybuilding",
         link: "emma_tereza" 
     },
     {
@@ -82,7 +82,7 @@ export const coachesData = [
         discipline: "Martial arts",
         icon: face4,
         image: trener4,
-        description: "",
+        description: "As a specialized personal trainer in bodybuilding, your work revolves around sculpting not only bodies but also empowering individuals with the strength and confidence they desire. With your expert guidance, clients embark on a transformative journey towards muscle development and physical prowess. Your tailored workout regimens and comprehensive training techniques ensure that each client's unique goals are not just met, but exceeded. Beyond the gym, you provide invaluable insights into nutrition, recovery, and lifestyle adjustments that harmonize with the demands of bodybuilding",
         link: "kiana_misko" 
     },
     {
@@ -90,7 +90,7 @@ export const coachesData = [
         discipline: "Martial arts",
         icon: face5,
         image: trener5,
-        description: "",
+        description: "As a specialized personal trainer in bodybuilding, your work revolves around sculpting not only bodies but also empowering individuals with the strength and confidence they desire. With your expert guidance, clients embark on a transformative journey towards muscle development and physical prowess. Your tailored workout regimens and comprehensive training techniques ensure that each client's unique goals are not just met, but exceeded. Beyond the gym, you provide invaluable insights into nutrition, recovery, and lifestyle adjustments that harmonize with the demands of bodybuilding",
         link: "mamed_chalidow" 
     },
     {
@@ -98,7 +98,9 @@ export const coachesData = [
         discipline: "Boxer",
         icon: face2,
         image: trener2,
-        description: "",
+        description: "As a specialized personal trainer in bodybuilding, your work revolves around sculpting not only bodies but also empowering individuals with the strength and confidence they desire. With your expert guidance, clients embark on a transformative journey towards muscle development and physical prowess. Your tailored workout regimens and comprehensive training techniques ensure that each client's unique goals are not just met, but exceeded. Beyond the gym, you provide invaluable insights into nutrition, recovery, and lifestyle adjustments that harmonize with the demands of bodybuilding",
         link: "marcin_najman" 
     }
-]
+];
+
+export default coachesData;
