@@ -10,7 +10,7 @@ const Slide = (props) => {
                     <img 
                         className="slide__img"
                         src={props.image} 
-                        alt="Trainer photo"
+                        alt={props.name}
                     />
                 </figure>
                 <p className="slide__name">

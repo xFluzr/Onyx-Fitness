@@ -38,7 +38,7 @@ const coachesData = [
         link: "michal_sakowski" 
     },
     {
-        name: "Anna Lewandowska",
+        name: "Anna Nowak",
         discipline: "Fitness",
         icon: face7,
         image: trener7,
