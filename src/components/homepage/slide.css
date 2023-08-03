@@ -1,0 +1,53 @@
+.slide{
+    display: flex;
+    margin: 1rem 6%;
+    padding: 1.5rem 1rem;
+    -webkit-box-shadow: 0px 0px 17px -7px rgba(181, 169, 242, 1);
+    -moz-box-shadow: 0px 0px 17px -7px rgba(181, 169, 242, 1);
+    box-shadow: 0px 0px 17px -7px rgba(181, 169, 242, 1);
+    border-radius: 0.250rem;
+}
+
+.slide__link{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-decoration: none;
+}
+
+.slide__img--wrapper{
+    width: 100%;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    padding-bottom: calc(184 / 184 * 100%);
+    transition: all 300ms ease;
+}
+
+.slide__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide:hover .slide__img--wrapper{
+    -webkit-box-shadow: 0px 0px 27px -8px  var(--purple);
+    -moz-box-shadow: 0px 0px 27px -8px  var(--purple);
+    box-shadow: 0px 0px 27px -8px  var(--purple);
+}
+
+.slide__name{
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 4% 0 0 0;
+}
+
+.slide__discipline{
+    color: var(--pink);
+    font-size: 0.875rem;
+}

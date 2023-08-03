@@ -13,7 +13,7 @@ html{
 
 :root{
     --background:#FCFCFE;
-    --light-gray:#B1AFB2;
+    --light-gray:#515959;
     --pink:#D7337A;
     --dark:#2E2B2B;
     --super-light-purple:#F3F0FF;
@@ -56,6 +56,14 @@ img, video{
     color: var(--light-gray);
 }
 
+.line{
+    margin: 1rem 0;
+    border: none;
+    background-color: var(--light-purple);
+    opacity: 0.2;
+    height: 1px;
+}
+
 @media screen and (max-width: 1024px) {
     .section__title{
         font-size: 2rem;
@@ -69,7 +77,6 @@ img, video{
         font-size: 0.850rem;
     }
 }
-
 
 @media screen and (max-width: 800px) {
     .section__title{
