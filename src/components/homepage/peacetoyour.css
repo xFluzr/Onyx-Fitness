@@ -22,9 +22,6 @@
     font-size: 2rem;
     color: var(--dark);
 }
-.line{
-    margin: 2rem 0;
-}
 .instructor-description{
     color:var(--light-gray);
     font-size: 1.25rem;
@@ -100,9 +97,6 @@
     .section-subtitle{
         text-align: center;
         font-size: 1.25rem;
-    }
-    .line{
-        margin: 1rem 0;
     }
     .instructor-description{
         text-align: center;
