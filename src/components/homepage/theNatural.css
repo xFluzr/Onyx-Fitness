@@ -103,3 +103,9 @@
         padding: 0 10%;
     }
 }
+
+@media screen and (max-width: 500px) {
+    #theNatural .section__title{
+        line-height: 0.8;
+    }
+}
