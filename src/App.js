@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Navbar from './components/nav/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Coach from './pages/Coach';
+import Footer from './components/footer/Footer';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Route path="/" element={<Home />}/>
           <Route path="/coach/:id" element={<Coach />}/>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   )

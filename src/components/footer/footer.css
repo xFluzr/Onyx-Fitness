@@ -1,0 +1,23 @@
+.footer__wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__top{
+    display: flex;
+}
+
+.footer__list{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.footer__list--link{
+    text-decoration: none;
+}
+
+.footer__img--wrapper,
+.footer__list{
+    width: 30%;
+}
