@@ -1,10 +1,18 @@
+footer{
+    background-color: var(--super-light-purple);
+    padding: 4% 0;
+}
+
 .footer__wrapper{
     display: flex;
     flex-direction: column;
+    padding: 0 2%;
 }
 
 .footer__top{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .footer__list{
@@ -18,6 +26,114 @@
 }
 
 .footer__img--wrapper,
+.footer__list,
+.footer__icons{
+    width: 22%;
+}
+
+.footer__img--wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer__img--link {
+   width: 80%;
+}
+
 .footer__list{
-    width: 30%;
+    padding-left: 9%;
+}
+
+.footer__icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer__bottom{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__social-icon{
+    color: var(--purple);
+    margin: 0 10px;
+    font-size: 1.725rem;
+    transition: all 200ms ease;
+}
+
+.footer__list--element{
+    margin: 2px 0;
+}
+
+.footer__text,
+.footer__list--link{
+    color: var(--light-gray);
+}
+
+.footer__list--link{
+    font-weight: 500;
+    transition: 300ms ease all;
+}
+
+.footer__list--link:hover{
+    color: var(--purple);
+}
+
+@media screen and (max-width: 800px) {
+    .footer__top{
+        justify-content: space-evenly;
+    }
+
+    .footer__img--wrapper{
+        width: 100%;
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer__icons{
+        margin: 4% 0 0 0;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .list2{
+        align-items: flex-end;
+    }
+
+    .footer__list{
+        width: 20%;
+        order: 2;
+    }
+
+    .footer__img--link{
+        width: 40%;
+        margin: 2% 0;
+    }
+
+    .footer__list{
+       padding-left: unset;
+    }
+
+    .footer__bottom{
+        margin-top: 8%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__text{
+        font-size: 0.875rem;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .footer__list{
+        width: 30%;
+    }
 }
