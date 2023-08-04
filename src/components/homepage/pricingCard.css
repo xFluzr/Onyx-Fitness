@@ -1,0 +1,134 @@
+.pricing-card{
+    margin: 0 1rem;
+    border-radius: 15px;
+    width: 30%;
+    padding: 1.5rem 1.125rem;
+    -webkit-box-shadow: 1px 1px 11px -2px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 1px 1px 11px -2px rgba(66, 68, 90, 1);
+    box-shadow: 1px 1px 8px -2px rgba(66, 68, 90, 0.479);
+    transition: 0.3s all ease;
+}
+.pricing-card:hover{
+    transform:translateY(15px);
+  
+}
+
+.pricing-card__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pricing-card__price{
+    position: relative;
+    font-size: 2.5rem;
+}
+.pricing-card__price::before{
+    content: '$';
+    left: -.75rem;
+    font-size: 1.25rem;
+    color:var(--light-gray);
+    top: -0.25rem;
+    position: absolute;
+}
+.pricing-card__price::after{
+    top: 1.5rem;
+    font-size: 1.25rem;
+    color:var(--light-gray);
+    content: "/mo";
+    position: absolute;
+}
+.pricing-card__planName{
+    font-size: 1.5rem;
+}
+.pricing-card__logo{
+    max-width: 40%;
+}
+.pricing-card__body{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+.pricing-card__description{
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.pricing-card__advantages{
+    list-style: none;
+    margin-bottom:1rem ;
+}
+.pricing-card__advantage{
+    margin: 1rem 0;
+}
+
+.pricing__button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    width: 100%;
+    background-color: var(--purple);
+    color: var(--background);
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    border-radius: 0.250rem;
+   border: 2px solid var(--purple);
+    transition: 300ms ease all;  
+}
+.pricing__button:hover{
+    background-color: var(--background);
+    color: var(--purple);
+}
+
+.xIcon{
+    color: #ff0000;
+    font-size: 1rem;
+    margin-right: .5rem;
+}
+.checkedIcon{
+    color: #00ff00;
+    font-size: 1rem;
+    margin-right: .5rem;
+}
+
+/*MOBILE LOOK*/
+
+@media screen and (max-width:1024px){
+    .pricing-card__price{
+        font-size:2.25rem;
+    }
+    .pricing-card__description{
+        font-size: 1rem;
+    }
+    .pricing-card{
+        width: 60%;
+        margin: 1rem 1rem;
+        padding: 1.25rem 1rem;
+    }
+    .pricing-card__price::before,.pricing-card__price::after{
+        font-size: 1.125rem;
+    }
+    .pricing-card__advantage{
+        margin: .75rem 0;
+    }
+}
+@media screen and (max-width: 800px){
+    .pricing-card{
+       
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    .pricing-card__top{
+        align-items: start;
+    }
+    .pricing-card__advantage{
+        margin: .75rem 0;
+    }
+    .pricing__button{
+        padding: 0.5rem 10%;
+    }
+}
+@media screen and (max-width: 500px){
+    .pricing-card{
+        width: 75%;
+    }
+}

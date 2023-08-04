@@ -15,20 +15,15 @@
     padding: 2rem;
     order:2;
 }
-.section-title{
-    font-size:4rem;
-}
+
 .section-subtitle{
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: var(--dark);
 }
 .line{
     margin: 2rem 0;
 }
-.instructor-description{
-    color:var(--light-gray);
-    font-size: 1.25rem;
-}
+
 .yoga-advantages{
     list-style: none;
     margin: 2rem 0;
@@ -39,20 +34,24 @@
     align-items: center;
 }
 .advantage-icon{
-    max-width: 6rem;
+    max-width: 5rem;
 }
 .advantage-content{
     margin: 1rem 1.5rem;
     text-align: center;
 }
 .advantage-title{
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color:var(--dark);
 }
 .advantage-description{
     font-size: .75rem;
 }
 
+.peace-btn__wrapper{
+    width: 80%;
+    margin: auto 0;
+}
 
 
 /* MOBILE LOOK */
@@ -120,9 +119,6 @@
     }
     .advantage-description{
         font-size: 1rem;
-    }
-    .section-content a{
-        width: 90%;
     }
     .advantage-title{
         font-size: 1rem;

@@ -13,10 +13,10 @@ const PeaceToYour = () => {
             <div className="section-wrapper">
             <img className="section-image" src={YogaWoman} alt="Woman doing yoga"/>
             <div className="section-content">
-              <h2 className="heading-pink section-title">Peace to Your</h2>
+              <h2 className="section__title heading-pink">Peace to Your</h2>
               <h3 className="section-subtitle">body and mind</h3>
               <hr className="line"/>
-              <p className="instructor-description">
+              <p className="section__text">
               Hi, My name is Anna Smith as a passionate yoga instructor, I am dedicated to helping my students achieve their goals in a supportive environment. My goal is to help you feel more centered, strong, and balanced both on and off the mat.
               </p>
               <ul className="yoga-advantages">
@@ -35,7 +35,10 @@ const PeaceToYour = () => {
                   
                 </li>
               </ul>
-              <Button type={"button"} isBackground={true} text={"Join Me"} additionalClasses="btn-lg"/>
+              <div className="peace-btn__wrapper">
+                <Button isBackground={true} text={"Join Me"}/>
+              </div>
+              
             </div>
             </div>
             

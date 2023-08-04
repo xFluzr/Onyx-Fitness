@@ -10,7 +10,7 @@ import Logo from "../../assets/logoname.svg";
 const Navbar = () => {
 
     //ilość przescrollowanej strony
-    const [LastScrollPosition, setLastScrollPosition] = useState(0);
+    const [lastScrollPosition, setLastScrollPosition] = useState(0);
 
     //funkcja odpowiada za dodawanie i zabieranie kalsy otwierającej menu
     const toggleMobileMenu = () => {
@@ -22,16 +22,17 @@ const Navbar = () => {
         const handleScroll = () => {
             const navbar = document.querySelector("nav");
             const navbarPlaceholder = document.querySelector(".navbar__placeholder");
-                
+            
             setLastScrollPosition(window.scrollY);
             
-            if(LastScrollPosition < window.scrollY){
+            if(lastScrollPosition < window.scrollY){
                 navbar.classList.add("navbar-small");
                 navbarPlaceholder.classList.add("navbar-small");
             } else {
                 navbar.classList.remove("navbar-small");
                 navbarPlaceholder.classList.remove("navbar-small");
             }
+            
         }
 
         window.addEventListener('scroll', handleScroll);
@@ -39,7 +40,7 @@ const Navbar = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         } 
-    },[LastScrollPosition])
+    },[lastScrollPosition])
 
     return (
         <>

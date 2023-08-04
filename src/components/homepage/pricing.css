@@ -1,0 +1,34 @@
+#pricing{
+    margin-top: 4rem;
+}
+.pricing__box{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#pricing .section__title{
+    text-align: center;
+}
+#pricing .section__text{
+    margin: 1.125rem auto;
+    text-align: center;
+    width: 60%;
+}
+
+.pricing-cards__list{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    margin: 2rem auto;
+}
+
+@media screen and (max-width:1024px) {
+    .pricing-cards__list{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 800px){
+    .pricing-cards__list{
+        flex-direction: column;
+    }
+}
