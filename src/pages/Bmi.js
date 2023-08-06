@@ -87,6 +87,9 @@ const Bmi = () => {
                             Calculate
                         </button>
                         <BmiResult bmi={bmi} bmiName={bmiName} />
+                        <p className="section__text">
+                            <span className="heading-pink">BMI (Body Mass Index)</span> is a numerical measure based on height and weight, used to assess if a person's weight is healthy or falls within underweight, normal, overweight, or obese categories.
+                        </p>
                     </div>
                 </div>
             </div>

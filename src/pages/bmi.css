@@ -79,6 +79,15 @@
     transition: all 300ms ease;
 }
 
+#bmi .section__text{
+    margin-top: 2rem;
+    text-align: justify;
+}
+
+#bmi .section__text span{
+    font-weight: 600;
+}
+
 @media screen and (max-width: 800px) {
     .bmi__data--wrapper{
         flex-direction: column;
@@ -86,6 +95,11 @@
 
     .bmi__calculator{
         padding: 1rem;
+    }
+
+    #bmi .section__text{
+        margin-top: 1.750rem;
+        text-align: justify;
     }
 }
 
