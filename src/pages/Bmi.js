@@ -1,14 +1,50 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../pages/bmi.css";
 import GenderButton from "../components/bmi/GenderButton";
 import BodyParameter from "../components/bmi/BodyParameter";
+import BmiResult from "../components/bmi/BmiResult";
 
 const Bmi = () => {
     const [gender, setGender] = useState(null);
     const [height, setHeight] = useState(175);
     const [weight, setWeight] = useState(70);
+    const [bmi, setBmi] = useState(null);
+    const [bmiName, setBmiName] = useState(null);
 
-    console.log(gender);
+    const calculateBmi = () => {
+        let bmiScore = (weight / Math.pow((height / 100),2)).toFixed(2);
+
+        if(bmiScore <= 18.5){
+            setBmi(bmiScore);
+            setBmiName("UNDERWEIGHT");
+        } else if(bmiScore > 18.5 && bmiScore <= 24.9) {
+            setBmi(bmiScore);
+            setBmiName("HEALTHY");
+        } else if(bmiScore > 24.9 && bmiScore <= 29.9) {
+            setBmi(bmiScore);
+            setBmiName("OVERWEIGHT");
+        } else if(bmiScore > 29.9 && bmiScore <=34.9) {
+            setBmi(bmiScore);
+            setBmiName("OBESE");
+        } else {
+            setBmi(bmiScore);
+            setBmiName("EXTREMALY OBESE");
+        }
+
+        const resultBox = document.querySelector(".bmi__result--box");
+        resultBox.classList.add("show-result");
+    }
+
+    useEffect(() => {
+        const showButton = () => {
+            const button = document.querySelector(".bmi__button");
+            if(gender !== null){
+                button.classList.add("button-show");
+            }
+        }
+
+        showButton();
+    },[gender])
 
     return (
         <section id="bmi">
@@ -47,9 +83,10 @@ const Bmi = () => {
                                 onChange={(e => setWeight(e.target.value))}
                             />
                         </div>
-                        <button className="bmi__button">
+                        <button className="bmi__button" onClick={calculateBmi}>
                             Calculate
                         </button>
+                        <BmiResult bmi={bmi} bmiName={bmiName} />
                     </div>
                 </div>
             </div>

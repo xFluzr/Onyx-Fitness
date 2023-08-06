@@ -7,11 +7,9 @@ const BodyParameter = (props) => {
             <p className="bmi__text--second">
                 {props.name}
             </p>
-            <input className="parameters__input" 
-                type="number" 
-                value={props.value}
-                onChange={props.onChange}
-            />
+            <p className="parameters__value">
+                {props.value}
+            </p>
             <input className="parameters__range" 
                 type="range" 
                 min={props.min} 

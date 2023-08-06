@@ -11,7 +11,7 @@
 }
 
 .gender--icon{
-    font-size: 8rem;
+    font-size: 7rem;
 }
 
 .man,
@@ -38,4 +38,10 @@
 
 .man-name{
     margin-right: 4%;
+}
+
+@media screen and (max-width: 800px) {
+    .gender--icon{
+        font-size: 5rem;
+    }
 }
