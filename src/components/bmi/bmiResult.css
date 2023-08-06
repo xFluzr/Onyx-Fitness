@@ -1,0 +1,93 @@
+.bmi__result--box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0rem;
+    transition: all 300ms ease;
+}
+
+.bmi__result,
+.bmi__result--name,
+.bmi__result--advice{
+    color: var(--dark);
+    font-size: 0rem;
+    font-weight: 500;
+    transition: all 300ms ease;
+}
+
+.bmi__result span,
+.bmi__result--name span{
+    font-weight: 600;
+    font-size: 0rem;
+    transition: all 300ms ease;
+}
+
+.bmi__result--advice{
+    margin-top: 0rem;
+    transition: all 300ms ease;
+}
+
+.show-result{
+    height: auto;
+    margin-top: 2rem;
+}
+
+.show-result .bmi__result,
+.show-result .bmi__result--name,
+.show-result .bmi__result--advice{
+    font-size: 1.625rem;
+}
+
+.show-result .bmi__result span,
+.show-result .bmi__result--name span{
+    font-size: 2rem;
+}
+
+.show-result .bmi__result--advice{
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .show-result{
+        height: auto;
+        margin-top: 1.875rem;
+    }
+
+    .show-result .bmi__result,
+    .show-result .bmi__result--name,
+    .show-result .bmi__result--advice{
+        font-size: 1.5rem;
+    }
+    
+    .show-result .bmi__result span,
+    .show-result .bmi__result--name span{
+        font-size: 1.875rem;
+    }
+    
+    .show-result .bmi__result--advice{
+        margin-top: 0.875rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .show-result{
+        height: auto;
+        margin-top: 1.5rem;
+    }
+
+    .show-result .bmi__result,
+    .show-result .bmi__result--name,
+    .show-result .bmi__result--advice{
+        font-size: 1.375rem;
+    }
+    
+    .show-result .bmi__result span,
+    .show-result .bmi__result--name span{
+        font-size: 1.625rem;
+    }
+    
+    .show-result .bmi__result--advice{
+        margin-top: 0.725rem;
+    }
+}

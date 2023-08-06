@@ -1,0 +1,47 @@
+.gender--button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 49.5%;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #B5A9F2;
+    padding: 1rem;
+}
+
+.gender--icon{
+    font-size: 7rem;
+}
+
+.man,
+.woman{
+    color: var(--super-light-purple);
+    transition: all 300ms ease;
+}
+
+.gender--button:hover .man{
+    color: var(--purple);
+}
+
+.gender--button:hover .woman{
+    color: var(--pink);
+}
+
+.is-man{
+    color: var(--purple);
+}
+
+.is-woman{
+    color: var(--pink);
+}
+
+.man-name{
+    margin-right: 4%;
+}
+
+@media screen and (max-width: 800px) {
+    .gender--icon{
+        font-size: 5rem;
+    }
+}
