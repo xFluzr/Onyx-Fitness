@@ -8,29 +8,9 @@ import Basic from '../../assets/svgicons/basic.svg'
 import Standard from '../../assets/svgicons/standard.svg'
 import Premium from '../../assets/svgicons/premium.svg'
 
-//PLANS
-const basicPlan={
-    "unlimited gym access":true,
-    "personal trainer":false,
-    "one class a week":true,
-    "pool, sauna, salt cave":false,
-    "free training towel":true
-  }
-  
-const standardPlan={
-  "unlimited gym access":true,
-  "personal trainer":false,
-  "one class a week":true,
-  "pool, sauna, salt cave":true,
-  "free training towel":true
-}
-const premiumPlan={
-  "unlimited gym access":true,
-  "personal trainer":true,
-  "one class a week":true,
-  "pool, sauna, salt cave":true,
-  "free training towel":true
-}
+//PLANS 
+import { basicPlan,premiumPlan,standardPlan } from '../../utils/pricingData'
+
 
 const Pricing = () => {
   return (
