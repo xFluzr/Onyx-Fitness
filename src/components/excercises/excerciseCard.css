@@ -1,0 +1,61 @@
+.excercise-card{
+    display: flex;
+    width: 24%;
+    padding: 1rem 0.5rem;
+    border-radius: 0.250rem;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 0px 11px -5px rgba(181, 169, 242, 1);
+    -moz-box-shadow: 0px 0px 11px -5px rgba(181, 169, 242, 1);
+    box-shadow: 0px 0px 11px -5px rgba(181, 169, 242, 1);
+    margin-bottom: 1rem;
+}
+
+.excercise-card__link{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.excercise-card__img--wrapper{
+    background-color: pink;
+    position: relative;
+    padding-bottom: calc((330 / 330) * 100%);
+}
+
+.excercise-card__img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.excercise-card__name{
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: var(--light-gray);
+    font-weight: 500;
+    text-overflow: ellipsis; /* enable elipsis - ... at the end*/
+    white-space: nowrap; /* keeps the text in a single line */
+    overflow: hidden;
+}
+
+.excercise-card__muscle{
+    color: var(--light-gray);
+    /* font-weight: 500; */
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .excercise-card{
+        width: 32%;
+    }    
+}
+
+@media screen and (max-width: 600px) {
+    .excercise-card{
+        width: 49%;
+    }    
+}

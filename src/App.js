@@ -5,6 +5,7 @@ import Navbar from './components/nav/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Coach from './pages/Coach';
 import Footer from './components/footer/Footer';
+import Excercises from './pages/Excercises';
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
           <Route path="/" element={<Home />}/>
           <Route path="/coach/:id" element={<Coach />}/>
           <Route path="/bmi" element={<Bmi />}/>
+          <Route path="/excercises" element={<Excercises />} />
+          {/* <Route path="/excercise:id" element={<Excercise />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>
