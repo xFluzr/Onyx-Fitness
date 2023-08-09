@@ -1,0 +1,28 @@
+#blog{
+    margin: 3rem 0;;
+}
+.blog__wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.articles__wrapper{
+    margin:1.5rem 0;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+}
+
+/* MOBILE LOOK */
+@media screen and (max-width:1024px){
+    .articles__wrapper{
+        margin: 1rem 0;
+    }
+}
+@media screen and (max-width:800px){
+    .articles__wrapper{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+}
