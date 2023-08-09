@@ -1,0 +1,10 @@
+.instagram__slider{
+    display: flex;
+    width: 100%;
+    margin: 2rem 0;
+}
+.instagram__image{
+    max-width: 100%;
+    padding: 0.25rem;
+    height: 14rem;
+}

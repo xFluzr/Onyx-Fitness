@@ -64,13 +64,15 @@
 /* MOBILE LOOK */
 @media screen and (max-width:1024px){
     .section-image{
-        max-width: 80%;
+        max-width: 60%;
         margin: 0 auto;
         
     }
     .section-content{
         max-width: 100%;
         text-align:center;
+        display:flex;
+        flex-direction:column;
         align-items: center;
     }
     .yoga-advantage{
