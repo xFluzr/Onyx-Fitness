@@ -4,6 +4,7 @@ import ExcerciseCard from "../excercises/ExcerciseCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import SkeletonList from "../excercises/SkeletonList";
+import axios from "axios";
 
 const ExcercisesList = () => {
 
@@ -13,7 +14,7 @@ const ExcercisesList = () => {
 
     useEffect(() => {
         const searchExcercise = () => {
-            //If user input value is not an empty string filter original API data with user phrase and set it to filteredExcercisesData 
+            //If user input value is not an empty string filter original API data with user phrase and set it as filteredExcercisesData 
             if(searchInputValue !== "") {
                 setFilteredExcercisesData(excercisesData.filter(excercise => excercise.name.includes(searchInputValue)))
             } else {
@@ -23,6 +24,26 @@ const ExcercisesList = () => {
 
         searchExcercise();
     },[searchInputValue,excercisesData])
+
+
+    useEffect(() => {
+        const options = {
+            method: 'GET',
+            url: 'https://exercisedb.p.rapidapi.com/exercises',
+            headers: {
+              'X-RapidAPI-Key': `${process.env.REACT_APP_EXERCISEDB_KEY}`,
+              'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+            }
+          };
+
+        const getExcercises = async (options) => {
+            await axios.request(options)
+            .then(data => setExcercisesData(data.data))
+            .catch(error => console.log("Excercises API CALL failed", error));
+        }
+
+        getExcercises(options);
+    },[])
 
     return (
         <>

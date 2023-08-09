@@ -6,7 +6,7 @@
     border-radius: 0.250rem;
     margin-bottom: 1rem;
     transition: all 300ms ease;
-    animation: changeBackgroundColor 1s linear infinite;
+    animation: changeBackgroundColor 1.3s linear infinite;
 }
 
 @media screen and (max-width: 1024px) {
