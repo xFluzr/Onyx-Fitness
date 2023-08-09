@@ -3,3 +3,11 @@
     flex-direction: column;
     align-items: center;
 }
+.instagram__wrapper .heading-pink{
+    text-decoration: none;
+}
+
+.instagram__wrapper .heading-pink:hover{
+    cursor: not-allowed;
+}
+

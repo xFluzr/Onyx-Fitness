@@ -21,7 +21,6 @@ const InstagramSlider = () => {
     const sliderSettings = {
         dots: true,
         infinite: false,
-        
         speed: 500,
         slidesToShow: 5,
         slidesToScroll: 1,
