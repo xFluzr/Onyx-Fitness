@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Coach from './pages/Coach';
 import Footer from './components/footer/Footer';
 import Post from './pages/Post';
+import Offer from './pages/Offer';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/coach/:id" element={<Coach />}/>
             <Route path="/post/:id" element={<Post />}/>
             <Route path="/bmi" element={<Bmi />}/>
+            <Route path="/offer" element={<Offer />}/>
           </Routes>
         <Footer />
       </BrowserRouter>

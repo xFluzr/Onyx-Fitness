@@ -1,0 +1,7 @@
+.offer__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 4rem;
+    justify-content: center;
+    gap: 1.5rem;
+}
