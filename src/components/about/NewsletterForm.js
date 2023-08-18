@@ -7,9 +7,12 @@ const NewsletterForm = () => {
   const [invalid,setInvalid]=useState(false)
   const form = useRef();
 
+
+  /*Sprawdza maila po wzorze*/
+  const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
   const sendEmail = (e) => {
     e.preventDefault();
-    if(userMail.includes('@') && userMail.length()>0){
+    if(emailPattern.test(userMail) && userMail.length>0){
           emailjs.sendForm(
           process.env.REACT_APP_SERVICE_KEY,
           process.env.REACT_APP_TEMPLATE_KEY,
@@ -25,6 +28,7 @@ const NewsletterForm = () => {
           
           )
           setInvalid(false)
+          setUserMail("")
         }else{
             console.log("err")
             setInvalid(true)
@@ -32,7 +36,7 @@ const NewsletterForm = () => {
           };
       }
   
-
+    /*jak wpisujemy dane to usuwa czerwony napis i czerowny border w inpucie */
   const inputHandler = (e) => {
     if(invalid){
       setInvalid(false)
