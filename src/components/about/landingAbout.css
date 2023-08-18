@@ -1,0 +1,64 @@
+#landing-about{
+    padding: 1.5rem 3rem;
+}
+.landing-about__wrapper{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.landing-about__wrapper .landing__image{
+    max-width: 50%;
+}
+.landing-about__wrapper .landing__context{
+   margin-left: 6%;
+}
+.landing__context .section__text{
+    margin: 2rem 0;
+}
+
+.our__achievements li{
+    display: flex;
+    text-decoration: none;
+    margin: 1.5rem 0;
+    align-items: center;
+    justify-content: flex-start;
+}
+.achievement__icon{
+    max-width: 4rem;
+    margin-right: 3%;
+}
+/*MOBILE LOOK*/
+@media screen and (max-width:1024px) {
+    .landing-about__wrapper{
+        padding: 1.25rem 2rem;
+    }
+}
+
+@media screen and (max-width:800px){
+    .landing-about__wrapper{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem 1.5rem;
+    }
+    .landing-about__wrapper .landing__context{
+        margin: 0;
+    }
+    .landing-about__wrapper .landing__image{
+        order: 2;
+        max-width: 90%;
+    }
+    .line{
+        width: 100%;
+    }
+    .our__achievements li{
+        justify-content: center;
+        text-align: left;
+        font-size: .9rem;
+    }
+   
+    .achievement__icon{
+        max-width: 3.5rem;
+    }
+}

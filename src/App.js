@@ -7,6 +7,7 @@ import Coach from './pages/Coach';
 import Footer from './components/footer/Footer';
 import Post from './pages/Post';
 import Offer from './pages/Offer';
+import About from './pages/About';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="/post/:id" element={<Post />}/>
             <Route path="/bmi" element={<Bmi />}/>
             <Route path="/offer" element={<Offer />}/>
+            <Route path="/about" element={<About/>}/>
           </Routes>
         <Footer />
       </BrowserRouter>
