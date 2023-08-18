@@ -1,0 +1,54 @@
+.newsletter--form{
+    margin:1.25rem 0;
+    display: flex;
+    align-items: center;
+    position:relative
+}
+
+.user__input{
+    padding: .7rem 6rem .7rem 2rem;
+    border: 1.5px solid var(--light-gray);
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    border-radius: 5px;
+    
+}
+
+.invalid__input{
+    border:1.5px solid red;
+}
+.error__message{
+    position: absolute;
+    bottom: -40%;
+    left: 25.5%;
+    color:red;
+    font-weight: bold;
+}
+/*Mobile Look*/
+@media screen and (max-width:800px) {
+    .newsletter--form{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    .user__input{
+        margin: 2rem 0;
+        padding: .75rem 4rem;
+        text-align: center;
+    }
+    .error__message{
+        bottom: 30%;
+        left: 37.5%;
+    }
+
+}
+
+@media screen and (max-width:512px){
+    .user__input{
+        padding: .5rem 3rem .5rem 1rem;
+        font-size: 1rem;
+    }
+    .error__message{
+        left: 30%;
+    }
+}

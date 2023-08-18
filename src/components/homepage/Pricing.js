@@ -16,7 +16,7 @@ const Pricing = () => {
                    {pricingSectionPlans.map((plan)=><PricingCard key={plan.planName} price={plan.price} planName={plan.planName} logo={plan.logo} description={plan.description}  additons={plan.additons}  />)}
                 </div>
                 
-                  <Button text={"See full offer"}/>
+                  <Button text={"See full offer"} link='offer'/>
                 
                 
             </div>

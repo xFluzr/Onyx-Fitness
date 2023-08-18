@@ -15,7 +15,7 @@ const Blog = () => {
                     return <Article key={post.id} image={post.image} title={post.title} desciption={post.desciption} author={post.author} id={post.id}/>
                   })}
                 </div>
-                <Button text="See More News"/>
+                <Button text="See More News" link='/post/1'/>
             </div>
         </div>
     </section>
