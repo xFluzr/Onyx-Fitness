@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Coach from './pages/Coach';
 import Footer from './components/footer/Footer';
 import Excercises from './pages/Excercises';
+import Excercise from './pages/Excercise';
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
           <Route path="/coach/:id" element={<Coach />}/>
           <Route path="/bmi" element={<Bmi />}/>
           <Route path="/excercises" element={<Excercises />} />
-          {/* <Route path="/excercise:id" element={<Excercise />} /> */}
+          <Route path="/excercise/:id" element={<Excercise />} />
         </Routes>
         <Footer />
       </BrowserRouter>

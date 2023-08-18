@@ -65,6 +65,8 @@ const ExcercisesList = () => {
         getExcercises(options);
     },[])
 
+    console.log(excercisesData)
+
     //These two helper functions recognize whether the user is searching or selecting
     const userIsSelecting = () => {
         setIsSearching(false)

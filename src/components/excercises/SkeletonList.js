@@ -12,6 +12,10 @@ const SkeletonList = () => {
             <SkeletonCard />
             <SkeletonCard />
             <SkeletonCard />
+            <SkeletonCard />
+            <SkeletonCard />
+            <SkeletonCard />
+            <SkeletonCard />
         </>
     );
 }
