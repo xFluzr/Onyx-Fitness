@@ -19,8 +19,8 @@
 }
 .error__message{
     position: absolute;
-    bottom: -35.5%;
-    left: 37.5%;
+    bottom: -38%;
+    left: 25.5%;
     color:red;
     font-weight: bold;
 }
@@ -38,6 +38,7 @@
     }
     .error__message{
         bottom: 30%;
+        left: 37.5%;
     }
 
 }
@@ -46,5 +47,8 @@
     .user__input{
         padding: .5rem 3rem .5rem 1rem;
         font-size: 1rem;
+    }
+    .error__message{
+        left: 30%;
     }
 }
