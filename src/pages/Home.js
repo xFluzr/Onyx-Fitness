@@ -8,6 +8,8 @@ import TheNatural from '../components/homepage/TheNatural'
 import OurCoaches from '../components/homepage/OurCoaches'
 import Opinions from '../components/homepage/Opinions'
 import Partners from '../components/homepage/Partners'
+import OurInstagram from '../components/homepage/OurInstagram'
+import Blog from '../components/homepage/Blog'
 
 
 const Home = () => {
@@ -22,6 +24,8 @@ const Home = () => {
       <OurCoaches />
       <Opinions/>
       <Partners/>
+      <Blog/>
+      <OurInstagram/>
     </>
   )
 }

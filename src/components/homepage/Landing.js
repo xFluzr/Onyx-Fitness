@@ -21,12 +21,10 @@ const Landing = () => {
             </p>
             <div className="landing-action">
               <Button text="Get Started" link="#" />
-              <Button text="Read More" isBackground={false} link="#"/>
+              <Button text="Read More" isBackground={false} link="#" />
             </div>
           </div>
-          <div className="landing__image--wrapper">
-
-          </div>
+          <div className="landing__image--wrapper"></div>
         </div>
       </div>
     </section>

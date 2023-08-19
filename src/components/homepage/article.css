@@ -1,0 +1,30 @@
+.article__box{
+    margin:0 1rem;
+    width: 30%;
+}
+.article__title{
+    color:var(--dark);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.article__title:hover{
+    color: black;
+}
+
+@media screen and (max-width:1024px){
+    .article__author{
+        font-size: .9rem;
+    }
+    .article__title{
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width:800px){
+    .article__box{
+        margin: 1.5rem 0;
+        width: 60%;
+        text-align: center;
+    }
+}
