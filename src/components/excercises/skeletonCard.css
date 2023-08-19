@@ -1,0 +1,43 @@
+.skeleton-card{
+    display: flex;
+    width: 24%;
+    height: 400px;
+    background-color: rgba(128, 128, 128, 0.664);
+    border-radius: 0.250rem;
+    margin-bottom: 1rem;
+    transition: all 300ms ease;
+    animation: changeBackgroundColor 1.3s linear infinite;
+}
+
+@media screen and (max-width: 1024px) {
+    .skeleton-card{
+        width: 32%;
+        height: 350px;
+    }    
+}
+
+@media screen and (max-width: 600px) {
+    .skeleton-card{
+        width: 49%;
+    }    
+}
+
+@media screen and (max-width: 425px) {
+    .skeleton-card{
+        height: 300px;
+    }    
+}
+
+@keyframes changeBackgroundColor {
+    0% {
+        background-color: rgba(128, 128, 128, 0.664);
+    }
+
+    50%{
+        background-color: rgba(194, 194, 194, 0.767);
+    }
+
+    100% {
+        background-color: rgba(128, 128, 128, 0.664);
+    }
+}
