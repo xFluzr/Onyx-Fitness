@@ -20,8 +20,8 @@ const Login = () => {
                             </div>
                             <img src={Logo} className="login__logo" alt="Onyx fitness"/>
                             <p className="login__header">Log in</p>
-                            <input className="login__email" type="text" placeholder="Email"/>
-                            <input className="login__password" type="password" placeholder="Password"/>
+                            <input className="login__input" type="text" placeholder="Email"/>
+                            <input className="login__input" type="password" placeholder="Password"/>
                             <Link to="" className="login__password-recovery">Forgot password?</Link>
                             <Link to="" className="login__button">Log in</Link>
                             <Link to="" className="login__button-google">Log in with Google</Link>

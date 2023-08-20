@@ -14,10 +14,10 @@ const Register = () => {
                         <div className="register__form--wrapper">
                             <img src={Logo} className="register__logo" alt="Onyx fitness"/>
                             <p className="register__header">Register</p>
-                            <input className="register__email" type="text" placeholder="Name"/>
-                            <input className="register__email" type="text" placeholder="Email"/>
-                            <input className="register__email" type="text" placeholder="Password"/>
-                            <input className="register__password" type="password" placeholder="Comfirm password"/>
+                            <input className="register__input" type="text" placeholder="Name"/>
+                            <input className="register__input" type="text" placeholder="Email"/>
+                            <input className="register__input" type="password" placeholder="Password"/>
+                            <input className="register__input" type="password" placeholder="Comfirm password"/>
                             <Link to="" className="register__button">Register</Link>
                             <div className="register__no-account">
                                 <p className="register__no-account--text">Do you have account?</p>

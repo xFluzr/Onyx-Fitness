@@ -46,8 +46,7 @@
     font-size: 1.250rem;
 }
 
-.register__email,
-.register__password{
+.register__input{
     border: 2px solid transparent;
     padding: 0.750rem 1rem;
     font-size: 1rem;
@@ -58,12 +57,9 @@
     transition: all 300ms ease;
 }
 
-.register__email:hover,
-.register__password:hover,
-.register__email:active,
-.register__password:active,
-.register__email:focus,
-.register__password:focus{
+.register__input:hover
+.register__input:active
+.register__input:focus{
     border: 2px solid var(--purple);
 }
 
@@ -186,7 +182,7 @@
         margin-top: 8%;
     }
 
-    .register__email, .register__password {
+    .register__input{
         padding: 0.625rem 1rem;
     }
 
@@ -196,7 +192,7 @@
 
     .register__no-account--text,
     .register__button,
-    .register__email, .register__password,
+    .register__input,
     .register__login{
         font-size: 0.875rem;
     }
@@ -232,7 +228,7 @@
 
     .register__no-account--text,
     .register__button,
-    .register__email, .register__password,
+    .register__input,
     .register__login{
         font-size: 1rem;
     }
@@ -241,7 +237,7 @@
         margin-bottom: 6%;
     }
 
-    .register__email, .register__password {
+    .register__input{
         padding: 0.750rem 1rem;
     }
 
@@ -266,12 +262,12 @@
 
     .register__no-account--text
     .register__button,
-    .register__email, .register__password,
+    .register__input,
     .register__login{
         font-size: 1rem;
     }
 
-    .register__email, .register__password {
+    .register__input{
         padding: 0.750rem 1rem;
         margin-bottom: 3%;
     }
@@ -293,12 +289,12 @@
 
     .register__no-account--text,
     .register__button,
-    .register__email, .register__password,
+    .register__input,
     .register__login{
         font-size: 0.875rem;
     }
 
-    .register__email, .register__password {
+    .register__input{
         padding: 0.625rem 0.875rem;
         margin-bottom: 3%;
     }
