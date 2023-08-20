@@ -1,8 +1,8 @@
-#login{
+#register{
     margin: 1rem 0.5rem;
 }
 
-.login__box{
+.register__box{
     border-radius: 4rem;
     padding: 1.250rem 1.250rem;
     background: rgb(205,112,215);
@@ -11,7 +11,7 @@
     justify-content: space-between
 }
 
-.login__form--background{
+.register__form--background{
     background: rgba(223, 217, 250, 0.8);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(9.4px);
@@ -21,11 +21,11 @@
     width: 49%;
     padding: 2%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
-.login__form--wrapper{
+.register__form--wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,11 +33,12 @@
     width: 475px;
 }
 
-.login__logo{
+.register__logo{
     width: 45%;
+    margin-top: 10%;
 }
 
-.login__header{
+.register__header{
     margin-top: 12%;
     margin-bottom: 4%;
     font-weight: 700;
@@ -45,8 +46,8 @@
     font-size: 1.250rem;
 }
 
-.login__email,
-.login__password{
+.register__email,
+.register__password{
     border: 2px solid transparent;
     padding: 0.750rem 1rem;
     font-size: 1rem;
@@ -57,24 +58,16 @@
     transition: all 300ms ease;
 }
 
-.login__email:hover,
-.login__password:hover,
-.login__email:active,
-.login__password:active,
-.login__email:focus,
-.login__password:focus{
+.register__email:hover,
+.register__password:hover,
+.register__email:active,
+.register__password:active,
+.register__email:focus,
+.register__password:focus{
     border: 2px solid var(--purple);
 }
 
-.login__password-recovery{
-    text-decoration: none;
-    color: var(--light-gray);
-    align-self: flex-end;
-    transition: all 300ms ease;
-}
-
-.login__button,
-.login__button-google{
+.register__button{
     text-decoration: none;
     padding: 1rem 0.5rem;
     width: 100%;
@@ -89,57 +82,49 @@
     transition: all 300ms ease;
 }
 
-.login__button{
+.register__button{
     margin-top: 8%;
     background-color: var(--purple);
 }
 
-.login__button-google{
-    margin-top: 0.5rem;
-    background-color: var(--dark);
-}
-
-.login__button:hover,
-.login__button-google:hover{
+.register__button:hover{
     transform: scale(1.02);
 }
 
-.login__no-account{
+.register__no-account{
     display: flex;
     margin-top: 0.5rem;
 }
 
-.login__no-account--text,
-.login__register{
+.register__no-account--text,
+.register__login{
     color: var(--light-gray);
 }
 
-.login__register{
+.register__login{
     margin-left: 0.250rem;
     text-decoration: none;
     transition: all 300ms ease;
 }
-
-.login__password-recovery:hover,
-.login__register:hover{
+.register__login:hover{
     opacity: 0.7;
 }
 
-.login__img--box{
+.register__img--box{
     width: 49%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-.login__img--wrapper{
+.register__img--wrapper{
     width: 90%;
     position: relative;
     display: block;
     padding-bottom: calc((870 / 618) * 100%);
 }
 
-.login__img{
+.register__img{
     object-fit: cover;
     object-position: right;
     position: absolute;
@@ -151,174 +136,174 @@
     height: 100%;
 }
 
+.test_register{
+    text-align: center;
+}
+
 @media screen and (max-width: 1200px) {
-    .login__box,
-    .login__form--background{
+    .register__box,
+    .register__form--background{
         border-radius: 3rem;
     }
     
-    .login__form--background{
+    .register__form--background{
         width: 52%;
     }
 
-    .login__form--wrapper{
+    .register__form--wrapper{
         width: 90%;
     }
 
-    .login__img--box{
+    .register__img--box{
         width: 46%;
     }
 
-    .login__header {
+    .register__header {
         margin-top: 10%;
         margin-bottom: 4%;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .login__box,
-    .login__form--background{
+    .register__box,
+    .register__form--background{
         border-radius: 2rem;
     }
     
-    .login__form--background{
+    .register__form--background{
         width: 54%;
     }
 
-    .login__form--wrapper{
+    .register__form--wrapper{
         width: 90%;
     }
 
-    .login__img--box{
+    .register__img--box{
         width: 44%;
     }
 
-    .login__header {
+    .register__header {
         margin-top: 8%;
     }
 
-    .login__email, .login__password {
+    .register__email, .register__password {
         padding: 0.625rem 1rem;
     }
 
-    .login__button, .login__button-google {
+    .register__button {
         padding: 0.875rem 0.5rem;
     }
 
-    .login__no-account--text,
-    .login__password-recovery,
-    .login__button, .login__button-google,
-    .login__email, .login__password,
-    .login__register{
+    .register__no-account--text,
+    .register__button,
+    .register__email, .register__password,
+    .register__login{
         font-size: 0.875rem;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .login__box,
-    .login__form--background{
+    .register__box,
+    .register__form--background{
         border-radius: 1.5rem;
     }
 
-    .login__img--box{
+    .register__img--box{
         display: none;
     }
 
-    .login__box{
+    .register__box{
         justify-content: center;
     }
 
-    .login__form--background {
+    .register__form--background {
         padding: 6% 2%;
         max-width: 475px;
         width: 100%;
     }
 
-    .login__form--wrapper{
+    .register__form--wrapper{
         width: 90%;
     }
 
-    .login__logo {
+    .register__logo {
        width: 52%;
     }
 
-    .login__no-account--text,
-    .login__password-recovery,
-    .login__button, .login__button-google,
-    .login__email, .login__password,
-    .login__register{
+    .register__no-account--text,
+    .register__button,
+    .register__email, .register__password,
+    .register__login{
         font-size: 1rem;
     }
 
-    .login__header {
+    .register__header {
         margin-bottom: 6%;
     }
 
-    .login__email, .login__password {
+    .register__email, .register__password {
         padding: 0.750rem 1rem;
     }
 
-    .login__button, .login__button-google {
+    .register__button {
         padding: 1rem 0.5rem;
     }
 }
 
 @media screen and (max-width: 425px) {
-    .login__box,
-    .login__form--background{
+    .register__box,
+    .register__form--background{
         border-radius: 1rem;
     }
 
-    .login__box{
+    .register__box{
         padding: 1.250rem 1rem;
     }
 
-    .login__form--background {
+    .register__form--background {
         padding: 8% 2%;
     }
 
-    .login__no-account--text,
-    .login__password-recovery,
-    .login__button, .login__button-google,
-    .login__email, .login__password,
-    .login__register{
+    .register__no-account--text
+    .register__button,
+    .register__email, .register__password,
+    .register__login{
         font-size: 1rem;
     }
 
-    .login__email, .login__password {
+    .register__email, .register__password {
         padding: 0.750rem 1rem;
         margin-bottom: 3%;
     }
 
-    .login__button, .login__button-google {
+    .register__button {
         padding: 1rem 0.5rem;
     }
 
-    .login__no-account{
+    .register__no-account{
         margin-top: 0.750rem;
     }
 }
 
 @media screen and (max-width: 320px) {
-    .login__box,
-    .login__form--background{
+    .register__box,
+    .register__form--background{
         border-radius: 0.875rem;
     }
 
-    .login__no-account--text,
-    .login__password-recovery,
-    .login__button, .login__button-google,
-    .login__email, .login__password,
-    .login__register{
+    .register__no-account--text,
+    .register__button,
+    .register__email, .register__password,
+    .register__login{
         font-size: 0.875rem;
     }
 
-    .login__email, .login__password {
+    .register__email, .register__password {
         padding: 0.625rem 0.875rem;
         margin-bottom: 3%;
     }
 
-    .login__button, .login__button-google {
+    .register__button {
         padding: 0.875rem 0.5rem;
     }
 }
