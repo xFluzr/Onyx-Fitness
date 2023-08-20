@@ -10,6 +10,7 @@ import Excercise from './pages/Excercise';
 import Post from './pages/Post';
 import Offer from './pages/Offer';
 import About from './pages/About';
+import Login from './components/login/Login';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/about" element={<About/>}/>
             <Route path="/excercises" element={<Excercises />} />
             <Route path="/excercise/:id" element={<Excercise />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         <Footer />
       </BrowserRouter>
