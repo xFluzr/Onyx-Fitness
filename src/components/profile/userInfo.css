@@ -1,0 +1,34 @@
+#user-info{
+    display: flex;
+    flex-direction: column;
+    width: 19%;
+}
+
+.user-info__name{
+    font-size: 1.625rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.user-info__img--wrapper{
+    width: 100%;
+    position: relative;
+    padding-bottom: calc((525 / 282) * 100%);
+}
+
+.user-info__img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .user-info__name{
+        font-size: 1.375rem;
+    }
+}
