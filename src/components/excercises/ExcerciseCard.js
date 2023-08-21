@@ -10,6 +10,7 @@ const ExcerciseCard = ({img, alt, name, id, muscle}) => {
                     <img className="excercise-card__img" 
                          src={img} 
                          alt={alt}
+                         loading="lazy"
                     />
                 </figure>
                 <p className="excercise-card__name">
