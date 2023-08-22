@@ -1,7 +1,8 @@
-import React from "react";
-import "../profile/myPrograms.css";
+import React, { useState } from "react";
+import "../profile/myProgramsAndMyDetails.css";
 
 const MyPrograms = () => {
+    const [workoutPrograms, setWorkoutPrograms] = useState("")
     return (
         <section id="my-programs">
             <div className="my-programs__header">
@@ -13,7 +14,13 @@ const MyPrograms = () => {
                 </button>
             </div>
             <div className="programs__box">
-                <p className="no-program">You have no saved workout program</p>
+                {
+                    workoutPrograms === "" ? (
+                        <p className="no-program">You have no saved workout program</p>
+                    ) : (
+                        <p className="no-program">Thats your workout programs</p>
+                    )
+                }
             </div>
         </section>
     )
