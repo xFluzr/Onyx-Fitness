@@ -37,7 +37,12 @@
 .userInfo-form__wrapper .btn{
     margin: 1.5rem 0;
 }
-
+/*Moblie look*/
+@media screen and (max-width:1024px) {
+    .userInfo-form__wrapper{
+        width: 50%;
+    }
+}
 @media screen and (max-width:800px) {
     .form__title{
         width: 70%;
@@ -63,7 +68,6 @@
         font-size: 1.5rem;
     }
     .userInfo-form__input{
-        width: 100%;
         font-size: 1rem;
         padding: .5rem 1.25rem;
     }

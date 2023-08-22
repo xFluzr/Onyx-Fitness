@@ -95,3 +95,16 @@
         font-size: .9rem;
     }
 }
+
+@media screen and (max-width:340px) {
+    .box__title{
+        font-size: .7rem;
+    }
+    .box__title::after{
+        height: 3px;
+        width: 30px;
+    }
+    .box__info{
+        font-size: .6rem;
+    }
+}
