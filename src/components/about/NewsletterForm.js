@@ -1,6 +1,7 @@
+import { sendEmail } from "../../utils/sendMail";
 import "./newsletterForm.css";
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+
 
 const NewsletterForm = () => {
   const [userMail, setUserMail] = useState("");
@@ -10,23 +11,10 @@ const NewsletterForm = () => {
 
   /*Sprawdza maila po wzorze*/
   const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-  const sendEmail = (e) => {
+  const submitHandler = (e) => {
     e.preventDefault();
     if(emailPattern.test(userMail) && userMail.length>0){
-          emailjs.sendForm(
-          process.env.REACT_APP_SERVICE_KEY,
-          process.env.REACT_APP_TEMPLATE_KEY,
-          form.current,
-          process.env.REACT_APP_PUBLIC_KEY
-        ).then(
-          (result) => {
-            console.log(result.text);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-          
-          )
+          sendEmail(process.env.REACT_APP_SERVICE_KEY,process.env.REACT_APP_NEWSLETTER_TEMPLATE_KEY,form.current,process.env.REACT_APP_PUBLIC_KEY)
           setInvalid(false)
           setUserMail("")
         }else{
@@ -49,7 +37,7 @@ const NewsletterForm = () => {
       ref={form}
       className="newsletter--form"
       method="POST"
-      onSubmit={sendEmail}
+      onSubmit={submitHandler}
     >
       <input
         onChange={inputHandler}

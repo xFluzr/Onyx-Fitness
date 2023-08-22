@@ -10,8 +10,10 @@ import Excercise from './pages/Excercise';
 import Post from './pages/Post';
 import Offer from './pages/Offer';
 import About from './pages/About';
+import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
+
 
 const App = () => {
   return (
@@ -25,6 +27,7 @@ const App = () => {
             <Route path="/bmi" element={<Bmi />}/>
             <Route path="/offer" element={<Offer />}/>
             <Route path="/about" element={<About/>}/>
+            <Route path="/contact" element={<Contact/>}/>
             <Route path="/excercises" element={<Excercises />} />
             <Route path="/excercise/:id" element={<Excercise />} />
             <Route path="/login" element={<Login />} />

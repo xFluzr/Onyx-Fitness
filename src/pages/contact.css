@@ -1,0 +1,14 @@
+.contact__top{
+    display: flex;
+    padding: 3rem 2rem;
+}
+
+
+/*Mobile look*/
+@media screen and (max-width:800px) {
+    .contact__top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
