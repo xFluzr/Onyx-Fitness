@@ -1,0 +1,14 @@
+#excercises{
+    padding: 2rem 1rem;
+}
+
+.excercises__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#excercises .section__text{
+    text-align: center;
+}
