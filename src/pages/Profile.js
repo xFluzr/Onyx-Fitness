@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
 
 const Profile = () => {
-    const [showPrograms, setShowPrograms] = useState(true);
+    const [showPrograms, setShowPrograms] = useState(false);
 
     const toggleUserInfo = () => {
         document.body.classList.toggle("user-info-open")

@@ -1,5 +1,6 @@
 import React from "react";
 import "../profile/myProgramsAndMyDetails.css";
+import DetailInput from "../profile/DetailInput";
 
 const MyDetails = () => {
     return (
@@ -13,7 +14,10 @@ const MyDetails = () => {
                 </button>
             </div>
             <div className="details__box">
-
+                <DetailInput name="Nickname" type="text" id="detail_nickname" />
+                <DetailInput name="Age" type="number" id="details_age" />
+                <DetailInput name="Height (cm)" type="number" id="details_height" />
+                <DetailInput name="Weight (kg)" type="number" id="details_weight" />
             </div>
         </section>
     )
