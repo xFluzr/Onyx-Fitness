@@ -1,0 +1,10 @@
+#profile-nav{
+    padding: 1rem 0.5rem;
+    box-shadow: 0px 15px 10px -20px #7c7c7c;
+}
+
+.profile-nav__buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
