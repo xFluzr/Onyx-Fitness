@@ -14,6 +14,7 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Gallery from './pages/Gallery';
+import Profile from './pages/Profile';
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/gallery" element={<Gallery/>}/>
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         <Footer />
       </BrowserRouter>

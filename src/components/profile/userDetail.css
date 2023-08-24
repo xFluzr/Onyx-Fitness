@@ -1,0 +1,23 @@
+.user-info__details{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.568);
+}
+
+.user-info__details:last-child{
+    border-bottom: none;
+}
+
+.user-info__detail,
+.user-info__detail--value{
+    font-size: 1.125rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .user-info__detail,
+    .user-info__detail--value{
+        font-size: 1rem;
+    }
+}
