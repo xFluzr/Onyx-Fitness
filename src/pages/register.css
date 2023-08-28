@@ -64,6 +64,7 @@
 }
 
 .register__button{
+    border: none;
     text-decoration: none;
     padding: 1rem 0.5rem;
     width: 100%;

@@ -1,11 +1,33 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useUserAuth } from "../context/UserAuthContext";
+
 import "../pages/register.css"
 
 import Girl from "../assets/login/girl.png"
 import Logo from "../assets/logoname.svg";
 
 const Register = () => {
+    const [email, setEmail] = useState(null);
+    const [password, setPassword] = useState(null);
+    const [comfirmPassword, setComfirmPassword] = useState(null);
+    const { signUp } = useUserAuth();
+
+    const [error, setError] = useState(null);
+
+    const navigateToLogin = useNavigate();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError(false);
+        try {
+            await signUp(email, password);
+            navigateToLogin("/login");
+        } catch (error) {
+            setError(error.message);
+        }
+    }
+
     return (
         <section id="register">
             <div className="container">
@@ -14,11 +36,30 @@ const Register = () => {
                         <div className="register__form--wrapper">
                             <img src={Logo} className="register__logo" alt="Onyx fitness"/>
                             <p className="register__header">Register</p>
-                            <input className="register__input" type="text" placeholder="Name"/>
-                            <input className="register__input" type="text" placeholder="Email"/>
-                            <input className="register__input" type="password" placeholder="Password"/>
-                            <input className="register__input" type="password" placeholder="Comfirm password"/>
-                            <Link to="" className="register__button">Register</Link>
+                            {
+                                error && <p>{error}</p> 
+                            }
+                            <form onSubmit={handleSubmit}>
+                                <input className="register__input" 
+                                       type="text" 
+                                       placeholder="Email"
+                                       onChange={(e) => setEmail(e.target.value)}
+                                       required
+                                />
+                                <input className="register__input" 
+                                       type="password" 
+                                       placeholder="Password"
+                                       onChange={(e) => setPassword(e.target.value)}
+                                       required
+                                />
+                                <input className="register__input" 
+                                       type="password" 
+                                       placeholder="Comfirm password"
+                                       onChange={(e) => setComfirmPassword(e.target.value)}
+                                       required
+                                />
+                                <button to="" className="register__button" type="submit">Register</button>
+                            </form>
                             <div className="register__no-account">
                                 <p className="register__no-account--text">Do you have account?</p>
                                 <Link to="/login" className="register__login">Log in</Link>
