@@ -42,7 +42,6 @@ const Gallery = () => {
       setTempImgId(1);
     }
   };
-
   return (
     <section id="gallery" className={`${showModal ? "lock-scroll" : ""}`}>
       <div className="container">
@@ -79,6 +78,7 @@ const Gallery = () => {
                 >
                   <img
                     src={image.src}
+                    className="image__background"
                     alt={`image-${image.id}`}
                     loading="lazy"
                   />

@@ -7,4 +7,6 @@
     max-width: 100%;
     padding: 0.25rem;
     height: 16rem;
+    object-fit: cover;
+    object-position: center;
 }
