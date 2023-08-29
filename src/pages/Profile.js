@@ -10,13 +10,25 @@ import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
 const Profile = () => {
     const [showPrograms, setShowPrograms] = useState(true);
 
+    console.log(showPrograms);
+
     const toggleUserInfo = () => {
         document.body.classList.toggle("user-info-open")
     }
 
+    const onClickShowPrograms = () => {
+        setShowPrograms(true);
+        console.log("1")
+    }
+
+    const onClickShowDetail = () => {
+        setShowPrograms(false);
+        console.log("2")
+    }
+
     return (
         <section id="profile">
-            <ProfileNavigation />
+            <ProfileNavigation showPrograms={onClickShowPrograms} showDetails={onClickShowDetail}/>
             <div className="container">
                 <div className="profile__box">
                     <button className="profile__dashbord--button" onClick={toggleUserInfo}>
