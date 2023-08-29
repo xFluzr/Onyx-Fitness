@@ -13,6 +13,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Gallery from './pages/Gallery';
 import Profile from './pages/Profile';
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -20,7 +21,6 @@ import { auth } from "./firebase";
 import ResetPassword from './pages/ResetPassword';
 
 const App = () => {
-
   const [loggedIn, setLoggedIn] = useState(false);
 
   auth.onAuthStateChanged((user) => {
@@ -55,6 +55,7 @@ const App = () => {
                         </ProtectedRoute>
                       } 
                 />
+                <Route path="/gallery" element={<Gallery/>}/>
                 <Route path="/reset" element={<ResetPassword />} />
               </Routes>
           </UserAuthContextProvider>
