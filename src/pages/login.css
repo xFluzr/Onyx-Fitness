@@ -102,6 +102,11 @@
     transform: scale(1.02);
 }
 
+.login__button:active,
+.login__button-google:active{
+    transform: scale(0.9);
+}
+
 .login__no-account{
     display: flex;
     margin-top: 0.5rem;

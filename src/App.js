@@ -17,6 +17,7 @@ import Profile from './pages/Profile';
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import { auth } from "./firebase";
+import ResetPassword from './pages/ResetPassword';
 
 const App = () => {
 
@@ -54,6 +55,7 @@ const App = () => {
                         </ProtectedRoute>
                       } 
                 />
+                <Route path="/reset" element={<ResetPassword />} />
               </Routes>
           </UserAuthContextProvider>
         <Footer />

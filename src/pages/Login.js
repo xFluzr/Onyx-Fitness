@@ -10,7 +10,7 @@ import Girl from "../assets/login/girl.png"
 import Logo from "../assets/logoname.svg";
 
 const Login = () => {
-    const { logIn, singInWithGoogle, resetPassword } = useUserAuth();
+    const { logIn, singInWithGoogle } = useUserAuth();
 
     const [email, setEmail] = useState(null);
     const [password, setPassword] = useState(null);
@@ -48,20 +48,13 @@ const Login = () => {
         }
     }
 
-    const handleResetPassword = async (e) => {
-        e.preventDefault();
-        try {
-            await resetPassword(email);
-        } catch {
-            setError(error.message);
-        }
-    }
-
     const displayError = (error) => {
         if(error  === "Firebase: Error (auth/user-not-found)."){
             return "User not found, try to register your account." ;
         } else if (error === "Firebase: Error (auth/wrong-password)."){
             return "Wrong password, try again.";
+        } else if (error === "Firebase: Error (auth/popup-closed-by-user)."){
+            return "Google login cancelled by user.";
         } else {
             return error;
         }
@@ -96,7 +89,7 @@ const Login = () => {
                                        onChange={(e) => setPassword(e.target.value)}
                                        required
                                 />
-                                <Link to="" className="login__password-recovery" onClick={handleResetPassword} >Forgot password?</Link>
+                                <Link to="/reset" className="login__password-recovery">Forgot password?</Link>
                                 <button className="login__button" type="submit">
                                    {!loading ? "Log in" : <FontAwesomeIcon className="login__loading" icon={faSpinner} /> } 
                                 </button>

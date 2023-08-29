@@ -57,8 +57,8 @@
     transition: all 300ms ease;
 }
 
-.register__input:hover
-.register__input:active
+.register__input:hover,
+.register__input:active,
 .register__input:focus{
     border: 2px solid var(--purple);
 }
@@ -76,16 +76,17 @@
     align-items: center;
     justify-content: center;
     border-radius: 0.450rem;
-    transition: all 300ms ease;
-}
-
-.register__button{
     margin-top: 8%;
     background-color: var(--purple);
+    transition: all 300ms ease;
 }
 
 .register__button:hover{
     transform: scale(1.02);
+}
+
+.register__button:active{
+    transform: scale(0.9);
 }
 
 .register__no-account{
@@ -135,6 +136,26 @@
 
 .test_register{
     text-align: center;
+}
+
+.register__error{
+    margin-bottom: 1rem;
+    color: red;
+}
+
+.register__loading{
+    font-size: 1.625rem;
+    animation: spin 800ms infinite ease;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media screen and (max-width: 1200px) {
