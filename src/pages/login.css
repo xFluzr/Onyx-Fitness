@@ -72,6 +72,7 @@
 
 .login__button,
 .login__button-google{
+    border: none;
     text-decoration: none;
     padding: 1rem 0.5rem;
     width: 100%;
@@ -99,6 +100,11 @@
 .login__button:hover,
 .login__button-google:hover{
     transform: scale(1.02);
+}
+
+.login__button:active,
+.login__button-google:active{
+    transform: scale(0.9);
 }
 
 .login__no-account{
@@ -150,6 +156,26 @@
 
 .test_login{
     text-align: center;
+}
+
+.login__error{
+    margin-bottom: 1rem;
+    color: red;
+}
+
+.login__loading{
+    font-size: 1.625rem;
+    animation: spin 800ms infinite ease;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media screen and (max-width: 1200px) {

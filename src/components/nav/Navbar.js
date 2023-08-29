@@ -7,7 +7,7 @@ import { faUser, faPhone, faBars, faXmark } from '@fortawesome/free-solid-svg-ic
 
 import Logo from "../../assets/logoname.svg";
 
-const Navbar = () => {
+const Navbar = ({loggedIn}) => {
 
     //ilość przescrollowanej strony
     const [lastScrollPosition, setLastScrollPosition] = useState(0);
@@ -73,7 +73,7 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="list--element">
-                            <Link to="/workouts" className="list--link">
+                            <Link to={loggedIn ? "/workouts" : "/login"} className="list--link">
                                 Workouts
                             </Link>
                         </li>
@@ -89,7 +89,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <div className="navbar__icon--wrapper">
-                        <Link to="/login" className="icon--link">
+                        <Link to={loggedIn ? "/profile" : "/login"} className="icon--link">
                             <FontAwesomeIcon className="navbar__icon" icon={faUser} />
                         </Link>
                         <Link to="/contact" className="icon--link">
