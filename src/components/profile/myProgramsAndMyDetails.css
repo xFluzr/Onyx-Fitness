@@ -59,6 +59,10 @@
     border-radius: 0.5rem;
 }
 
+.programs__box{
+    flex-direction: column;
+}
+
 .no-program{
     text-align: center;
     font-size: 1.5rem;

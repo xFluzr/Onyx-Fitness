@@ -4,7 +4,7 @@ import "../profile/profileNavigation.css";
 import ProfileNavigationButton from "./ProfileNavigationButton";
 import { useUserAuth } from "../../context/UserAuthContext";
 
-const ProfileNavigation = ({showPrograms, showDetails}) => {
+const ProfileNavigation = ({onClickShowPrograms, onClickShowDetail}) => {
     const { logOut } = useUserAuth();
 
     const navigateToLogin = useNavigate();
@@ -22,8 +22,8 @@ const ProfileNavigation = ({showPrograms, showDetails}) => {
         <div id="profile-nav">
             <div className="container">
                 <div className="profile-nav__buttons">
-                    <ProfileNavigationButton name="my programs" onclick={showPrograms} />
-                    <ProfileNavigationButton name="my detail" onclick={showDetails} />
+                    <ProfileNavigationButton name="my programs" onclick={onClickShowPrograms} />
+                    <ProfileNavigationButton name="my detail" onclick={onClickShowDetail} />
                     <ProfileNavigationButton name="logout" onclick={handleLogOut} />
                 </div>
             </div>
