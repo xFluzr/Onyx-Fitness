@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../profile/myProgramsAndMyDetails.css";
+import WorkoutAccordion from "./WorkoutAccordion";
 
 const MyPrograms = () => {
 
@@ -8,9 +9,10 @@ const MyPrograms = () => {
     console.log("WorkoutPrograms", workoutPrograms);
 
     const excerciseTemplate = {
-        exName: "",
-        reps: 0,
-        weight: 0 
+        exName: "Excercise",
+        sets: 1,
+        reps: 1,
+        weight: 10 
     }
 
     const workoutTemplate = {
@@ -49,8 +51,11 @@ const MyPrograms = () => {
 
     const handleExcerciseDelete = (workoutIndex, excerciseIndex) => {
         let tempWorkout = [...workoutPrograms];
-        tempWorkout[workoutIndex].excercises.splice(excerciseIndex,1); // wybieram trening o indeksie (workoutIndex) następnie z jego tablicy excercises usuwam jedno ćwiczenie od indexu(excerciseIndex)
-        setWorkoutPrograms(tempWorkout);
+        // sprawdzenie czy trening zawiera więcej niż jedno ćwiczenie przed usunięciem
+        if(tempWorkout[workoutIndex].excercises.length > 1){
+            tempWorkout[workoutIndex].excercises.splice(excerciseIndex,1); // wybieram trening o indeksie (workoutIndex) następnie z jego tablicy excercises usuwam jedno ćwiczenie od indexu(excerciseIndex)
+            setWorkoutPrograms(tempWorkout);
+        }
     }
 
     const handleExcerciseChange = (workoutIndex, excerciseIndex, e) => {
@@ -61,7 +66,7 @@ const MyPrograms = () => {
     }
 
     const handleUpdateWorkout = () => {
-        
+
     }
 
     return (
@@ -80,29 +85,15 @@ const MyPrograms = () => {
                         <p className="no-program">You have no saved workout program</p>
                     ) : (
                         workoutPrograms.map((workout, workoutIndex) => {
-                            return (
-                                <div className="workout" key={workoutIndex}>
-                                    <span className="workout__name">
-                                        {workout.workoutName}
-                                        <input name="workoutName" type="text" value={workout.workoutName} onChange={(e) => handleWorkoutNameChange(e, workoutIndex)} />
-                                    </span>
-                                    <div className="workout__body">
-                                        {workout.excercises.map((excercise, excerciseIndex) => {
-                                            return (
-                                                <div className="workout__excercise" key={excerciseIndex}>
-                                                    <input name="exName" type="text" value={excercise.exName} onChange={(e) => handleExcerciseChange(workoutIndex, excerciseIndex, e)} />
-                                                    <input name="reps" type="number" value={excercise.reps} onChange={(e) => handleExcerciseChange(workoutIndex, excerciseIndex, e)} />
-                                                    <input name="weight" type="number" value={excercise.weight} onChange={(e) => handleExcerciseChange(workoutIndex, excerciseIndex, e)} />
-                                                    <button className="workout__delete--small" onClick={() => handleExcerciseDelete(workoutIndex, excerciseIndex)}>DELETE</button>
-                                                </div>  
-                                            )
-                                        })}
-                                    </div>
-                                    <button className="workout__add" onClick={() => handleAddExcercise(workoutIndex)}>Add excercise</button>
-                                    <button className="workout__delete" onClick={() => handleDeleteWorkout(workoutIndex)}>Delete workout</button>
-                                    <button className="workout__update" onClick={handleUpdateWorkout}>Save workout</button>
-                                </div>
-                            )
+                            return <WorkoutAccordion workout={workout} 
+                                                     workoutIndex={workoutIndex}
+                                                     handleDeleteWorkout={handleDeleteWorkout}
+                                                     handleWorkoutNameChange={handleWorkoutNameChange}
+                                                     handleAddExcercise={handleAddExcercise}
+                                                     handleExcerciseDelete={handleExcerciseDelete}
+                                                     handleExcerciseChange={handleExcerciseChange}
+                                                     handleUpdateWorkout={handleUpdateWorkout}
+                                    />
                         })
                     )
                 }

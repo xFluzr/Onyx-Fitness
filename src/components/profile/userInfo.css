@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 19%;
+    z-index: 2;
 }
 
 .user-info__name{
@@ -56,7 +57,7 @@
     }
 
     .user-info__img--wrapper{
-        width: 35%;
+        width: 37%;
         padding-bottom: calc((325 / 450) * 100%);
     }
 
