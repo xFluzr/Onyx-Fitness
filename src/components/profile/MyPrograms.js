@@ -29,30 +29,38 @@ const MyPrograms = () => {
     }
 
     const handleDeleteWorkout = (workoutIndex) => {
-        let deletedWorkout = [...workoutPrograms];
-        deletedWorkout.splice(workoutIndex,1);
-        setWorkoutPrograms(deletedWorkout);
+        let tempWorkouts = [...workoutPrograms]; // kopiuje wszytkie treningi
+        tempWorkouts.splice(workoutIndex,1); // usuwam jeden treningi od podanego indexu (workoutIndex)
+        setWorkoutPrograms(tempWorkouts);
     }
 
     const handleWorkoutNameChange = (e, workoutIndex) => {
         const {name, value} = e.target;
-        let tempWorkouts = [...workoutPrograms]; // kopiuje wszytkie treningi
-        tempWorkouts[workoutIndex][name] = value; // modyfikuje daną w treningu o konkretnym indeksie i nazwie pobieranej z inputa
+        let tempWorkouts = [...workoutPrograms];
+        tempWorkouts[workoutIndex][name] = value; // w treningu o konkretnym indexie (workoutIndex) zmieniam wartość (value) danej pobieranej z inputa (name)
         setWorkoutPrograms(tempWorkouts);
     }
 
     const handleAddExcercise = (workoutIndex) => {
-        let tempWorkout = [...workoutPrograms]; // kopiuje wszystkie treningi
-        // console.log(tempWorkout[workoutIndex]);
-        tempWorkout[workoutIndex].excercises.push(excerciseTemplate); // do treningu o określonym indeksie dodaje na koniec obiekt reprezentujący ćwiczenie
+        let tempWorkout = [...workoutPrograms];
+        tempWorkout[workoutIndex].excercises.push(excerciseTemplate); // do treningu o określonym indeksie (workoutIndex) do tablicy z ćwiczeniami dodaje na koniec obiekt reprezentujący jedno ćwiczenie
         setWorkoutPrograms(tempWorkout);
     }
 
-    const handleExcerciseDelete = () => {
-
+    const handleExcerciseDelete = (workoutIndex, excerciseIndex) => {
+        let tempWorkout = [...workoutPrograms];
+        tempWorkout[workoutIndex].excercises.splice(excerciseIndex,1); // wybieram trening o indeksie (workoutIndex) następnie z jego tablicy excercises usuwam jedno ćwiczenie od indexu(excerciseIndex)
+        setWorkoutPrograms(tempWorkout);
     }
 
-    const handleExcerciseChange = () => {
+    const handleExcerciseChange = (workoutIndex, excerciseIndex, e) => {
+        const {name, value} = e.target;
+        let tempWorkout = [...workoutPrograms];
+        tempWorkout[workoutIndex].excercises[excerciseIndex][name] = value; // wybieram trening o indexie (workoutIndex) nastpnie tablicę z ćwiczeniami (excercises) z niej konkretne ćwiczenie o indexie (excerciseIndex) i pole o nazwie z inputa (name) któremu ustawiam wartość (value)
+        setWorkoutPrograms(tempWorkout);
+    }
+
+    const handleUpdateWorkout = () => {
         
     }
 
@@ -79,19 +87,20 @@ const MyPrograms = () => {
                                         <input name="workoutName" type="text" value={workout.workoutName} onChange={(e) => handleWorkoutNameChange(e, workoutIndex)} />
                                     </span>
                                     <div className="workout__body">
-                                        {workout.excercises.map((excercise, index) => {
+                                        {workout.excercises.map((excercise, excerciseIndex) => {
                                             return (
-                                                <div className="workout__excercise" key={index}>
-                                                    <input name="exName" type="text" value={excercise.exName} onChange={(e) => handleExcerciseChange(e, index)} />
-                                                    <input name="reps" type="number" value={excercise.reps} onChange={(e) => handleExcerciseChange(e, index)} />
-                                                    <input name="weight" type="number" value={excercise.weight} onChange={(e) => handleExcerciseChange(e, index)} />
-                                                    <button className="workout__delete--small" onClick={handleExcerciseDelete}>DELETE</button>
+                                                <div className="workout__excercise" key={excerciseIndex}>
+                                                    <input name="exName" type="text" value={excercise.exName} onChange={(e) => handleExcerciseChange(workoutIndex, excerciseIndex, e)} />
+                                                    <input name="reps" type="number" value={excercise.reps} onChange={(e) => handleExcerciseChange(workoutIndex, excerciseIndex, e)} />
+                                                    <input name="weight" type="number" value={excercise.weight} onChange={(e) => handleExcerciseChange(workoutIndex, excerciseIndex, e)} />
+                                                    <button className="workout__delete--small" onClick={() => handleExcerciseDelete(workoutIndex, excerciseIndex)}>DELETE</button>
                                                 </div>  
                                             )
                                         })}
                                     </div>
                                     <button className="workout__add" onClick={() => handleAddExcercise(workoutIndex)}>Add excercise</button>
                                     <button className="workout__delete" onClick={() => handleDeleteWorkout(workoutIndex)}>Delete workout</button>
+                                    <button className="workout__update" onClick={handleUpdateWorkout}>Save workout</button>
                                 </div>
                             )
                         })
