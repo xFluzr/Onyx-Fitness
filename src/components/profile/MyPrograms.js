@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../profile/myProgramsAndMyDetails.css";
 import WorkoutAccordion from "./WorkoutAccordion";
+import { db } from "../../firebase";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { useUserAuth } from "../../context/UserAuthContext";
 
 const MyPrograms = () => {
 
-    const [workoutPrograms, setWorkoutPrograms] = useState([])
-
-    console.log("WorkoutPrograms", workoutPrograms);
+    const [workoutPrograms, setWorkoutPrograms] = useState([]);
+    const { user } = useUserAuth(); 
+    // console.log("WorkoutPrograms", workoutPrograms);
 
     const excerciseTemplate = {
         exName: "Excercise",
@@ -21,6 +24,25 @@ const MyPrograms = () => {
             excerciseTemplate
         ]
     };
+
+    useEffect(() => {
+        // zapytanie do bazy szukające w kolekcji "workoutplans" pól "email" których wartość jest równa emailowi użytkownika;
+        const workoutProgramsQuery = query(collection(db, "workoutplans"), where("email", "==", `${user.email}`));
+
+        const getWorkoutPrograms = async () => {
+            const data = await getDocs(workoutProgramsQuery);
+            if(data.empty){
+                console.log("No data for this user");
+                return;
+            } else {
+                data.forEach((doc) => {
+                    setWorkoutPrograms(JSON.parse(`${doc.data().workouts}`));
+                });
+            }
+        }
+
+        getWorkoutPrograms();
+    },[])
 
     const handleAddWorkout = () => {
         if(!workoutPrograms){
