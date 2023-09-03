@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../profile/workoutAccordion.css";
 
-const WorkoutAccordion = ({workout, workoutIndex, handleDeleteWorkout, handleWorkoutNameChange, handleAddExcercise, handleExcerciseDelete, handleExcerciseChange, handleUpdateWorkout }) => {
+const WorkoutAccordion = ({workout, workoutIndex, handleDeleteWorkout, handleWorkoutNameChange, handleAddExcercise, handleExcerciseDelete, handleExcerciseChange, handleSaveOrSetWorkouts }) => {
 
     const toggleWorkout = (workoutIndex) => {
         const workoutBox = document.getElementsByClassName("workout");
@@ -52,7 +52,7 @@ const WorkoutAccordion = ({workout, workoutIndex, handleDeleteWorkout, handleWor
                 <div className='workout__button--wrapper'>
                     <button className="workout__add" onClick={() => handleAddExcercise(workoutIndex)}>Add excercise</button>
                     <button className="workout__delete" onClick={() => handleDeleteWorkout(workoutIndex)}>Delete workout</button>
-                    <button className="workout__update" onClick={handleUpdateWorkout}>Save workout</button>
+                    {/* <button className="workout__update" onClick={() => handleSaveOrSetWorkouts()}>Save workout</button> */}
                 </div>
             </div>
         </div>

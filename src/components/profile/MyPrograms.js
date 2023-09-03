@@ -2,14 +2,21 @@ import React, { useState, useEffect } from "react";
 import "../profile/myProgramsAndMyDetails.css";
 import WorkoutAccordion from "./WorkoutAccordion";
 import { db } from "../../firebase";
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, query, where, getDocs, addDoc, updateDoc, doc } from "firebase/firestore";
 import { useUserAuth } from "../../context/UserAuthContext";
 
 const MyPrograms = () => {
 
     const [workoutPrograms, setWorkoutPrograms] = useState([]);
+    const [userDatabaseDocId, setUserDatabaseDocId] = useState("");
+    const [haveWorkoutsInDatabase, setHaveWorkoutsInDatabase] = useState(false);
     const { user } = useUserAuth(); 
-    // console.log("WorkoutPrograms", workoutPrograms);
+
+    console.log("USER DOC ID", userDatabaseDocId);
+
+    const workoutsCollectionRef = collection(db, "workoutplans");
+
+    console.log("Workouts:" , workoutPrograms);
 
     const excerciseTemplate = {
         exName: "Excercise",
@@ -36,13 +43,15 @@ const MyPrograms = () => {
                 return;
             } else {
                 data.forEach((doc) => {
-                    setWorkoutPrograms(JSON.parse(`${doc.data().workouts}`));
-                });
+                        setWorkoutPrograms(JSON.parse(`${doc.data().workouts}`));
+                        setUserDatabaseDocId(doc.id);
+                    });
+                setHaveWorkoutsInDatabase(true);
             }
         }
 
         getWorkoutPrograms();
-    },[])
+    },[haveWorkoutsInDatabase])
 
     const handleAddWorkout = () => {
         if(!workoutPrograms){
@@ -56,6 +65,7 @@ const MyPrograms = () => {
         let tempWorkouts = [...workoutPrograms]; // kopiuje wszytkie treningi
         tempWorkouts.splice(workoutIndex,1); // usuwam jeden treningi od podanego indexu (workoutIndex)
         setWorkoutPrograms(tempWorkouts);
+        // saveChangesToDatabase();
     }
 
     const handleWorkoutNameChange = (e, workoutIndex) => {
@@ -87,8 +97,33 @@ const MyPrograms = () => {
         setWorkoutPrograms(tempWorkout);
     }
 
-    const handleUpdateWorkout = () => {
+    const saveChangesToDatabase = async () => {
+        const userDoc = doc(db, "workoutplans", userDatabaseDocId);
+        const stringifiedWorkouts = JSON.stringify(workoutPrograms);
+        try {
+            await updateDoc(userDoc, {workouts: stringifiedWorkouts});
+        } catch(error) {
+            console.log("Nie udało się zaktualizować treningów w bazie", error.message);
+        }
+    }
 
+    const addWorkoutToDatabase = async () => {
+        const stringifiedWorkouts = JSON.stringify(workoutPrograms);
+        try{
+            await addDoc(workoutsCollectionRef, {email: user.email, workouts: stringifiedWorkouts});
+            setHaveWorkoutsInDatabase(true);
+            // return;
+        } catch(error) {
+            console.log("Nie działa dodawanie do bazy gdy nie ma treningów", error.message);
+        }
+    }
+
+    const handleSaveOrSetWorkouts = () => {
+        if(haveWorkoutsInDatabase){
+            saveChangesToDatabase();
+        } else {
+            addWorkoutToDatabase();
+        }
     }
 
     return (
@@ -97,9 +132,14 @@ const MyPrograms = () => {
                 <h1 className="my-programs__title">
                     Programs I have created
                 </h1>
-                <button className="my-programs__add" onClick={handleAddWorkout}>
-                    new program +
-                </button>
+                <div className="my-programs__buttons">
+                    <button className="my-programs__save" onClick={handleSaveOrSetWorkouts}>
+                            save changes
+                    </button>
+                    <button className="my-programs__add" onClick={handleAddWorkout}>
+                        new program +
+                    </button>
+                </div>
             </div>
             <div className="programs__box">
                 {
@@ -114,7 +154,7 @@ const MyPrograms = () => {
                                                      handleAddExcercise={handleAddExcercise}
                                                      handleExcerciseDelete={handleExcerciseDelete}
                                                      handleExcerciseChange={handleExcerciseChange}
-                                                     handleUpdateWorkout={handleUpdateWorkout}
+                                                     handleSaveOrSetWorkouts={handleSaveOrSetWorkouts}
                                     />
                         })
                     )
