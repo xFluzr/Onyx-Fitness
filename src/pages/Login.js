@@ -19,7 +19,7 @@ const Login = () => {
     const [loading, setLoading] = useState(false);
     const [loadingGoogle, setLoadingGoogle] = useState(false);
 
-    const navigateToProfile = useNavigate();
+    const navigateTo = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,7 +27,7 @@ const Login = () => {
         setError(false);
         try {
             await logIn(email, password);
-            navigateToProfile("/profile");
+            navigateTo("/profile")
             setLoading(false);
         } catch(error) {
             setError(error.message);
@@ -40,7 +40,7 @@ const Login = () => {
         setLoadingGoogle(true);
         try {
             await singInWithGoogle();
-            navigateToProfile("/profile");
+            navigateTo("/profile")
             setLoadingGoogle(false)
         } catch(error) {
             setError(error.message);

@@ -1,0 +1,26 @@
+.workout-content__box{
+    width: 78%;
+    display: flex;
+    justify-content: center;
+}
+
+.workout-content{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.workout-content__header{
+    border-radius: 0.750rem 0.750rem 0 0;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: var(--light-purple);
+}
+
+.workout-content__name{
+    font-size: 1.5rem;
+    color: var(--background);
+    letter-spacing: 1px;
+    font-weight: 500;
+}

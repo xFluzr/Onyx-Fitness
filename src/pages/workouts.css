@@ -1,0 +1,17 @@
+#workouts{
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.workouts__box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.workouts__layout{
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}

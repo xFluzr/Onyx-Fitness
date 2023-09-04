@@ -32,7 +32,6 @@ const Navbar = ({loggedIn}) => {
                 navbar.classList.remove("navbar-small");
                 navbarPlaceholder.classList.remove("navbar-small");
             }
-            
         }
 
         window.addEventListener('scroll', handleScroll);
