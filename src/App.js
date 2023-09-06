@@ -20,6 +20,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import { auth } from "./firebase";
 import ResetPassword from './pages/ResetPassword';
 import Workouts from './pages/Workouts';
+import NoPage from './pages/NoPage';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -59,6 +60,7 @@ const App = () => {
                 />
                 <Route path="/gallery" element={<Gallery/>}/>
                 <Route path="/reset" element={<ResetPassword />} />
+                <Route path="*" element={<NoPage />} />
               </Routes>
           </UserAuthContextProvider>
         <Footer />

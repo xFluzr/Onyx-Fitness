@@ -1,0 +1,133 @@
+#no-page{
+    margin: 4rem 0;
+    padding: 0 1rem;
+}
+
+.no-page__box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-page__text--wrapper{
+    width: 50%;
+}
+
+.no-page__img--wrapper{
+    width: 40%;
+}
+
+.no-page__text{
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 3rem;
+    line-height: 1.2;
+    color: var(--dark);
+}
+
+.text-big{
+    font-size: 4.5rem;
+    color: var(--pink);
+}
+
+#no-page .btn{
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.no-page__btn--icon{
+    margin-right: 0.625rem;
+}
+
+.no-page__img--cls{
+    position: relative;
+    padding-bottom: calc((576 / 576) * 100%);
+}
+
+.no-page__img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .no-page__text{
+        font-size: 2.625rem;
+    }
+    
+    .text-big{
+        font-size: 4rem;
+        color: var(--pink);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .no-page__text{
+        font-size: 2.375rem;
+    }
+    
+    .text-big{
+        font-size: 3.750rem;
+        color: var(--pink);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #no-page{
+        margin: 2rem 0;
+    }
+
+    .no-page__box{
+        flex-direction: column;
+    }
+
+    .no-page__text--wrapper{
+        text-align: center;
+        width: 100%;
+    }
+
+    .no-page__img--wrapper{
+        margin-top: 4rem;
+        width: 50%;
+    }
+
+    .no-page__text{
+        font-size: 2.125rem;
+    }
+    
+    .text-big{
+        font-size: 3.250rem;
+        color: var(--pink);
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .no-page__text{
+        font-size: 1.875rem;
+    }
+    
+    .text-big{
+        font-size: 2.625rem;
+        color: var(--pink);
+    }
+
+    .no-page__img--wrapper{
+        margin-top: 3rem;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .no-page__text{
+        font-size: 1.625rem;
+    }
+    
+    .text-big{
+        font-size: 2.250rem;
+        color: var(--pink);
+    }
+}
