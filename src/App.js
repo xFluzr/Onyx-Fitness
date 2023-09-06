@@ -49,7 +49,7 @@ const App = () => {
                 <Route path="/excercise/:id" element={<Excercise />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
-                <Route path="/workouts" element={<Workouts />} />
+                <Route path="/workouts" element={<Workouts loggedIn={loggedIn}/>} />
                 <Route path="/profile" 
                       element={
                         <ProtectedRoute loggedIn={loggedIn}>

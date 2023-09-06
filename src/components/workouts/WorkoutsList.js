@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretUp, faCaretDown } from "@fortawesome/free-solid-svg-icons"
 
-const WorkoutsList = ({workoutPrograms}) => {
+const WorkoutsList = ({workoutPrograms, setWorkoutIndex}) => {
     const [openList, setOpenList] = useState(false);
 
     const handleClick = () => {
@@ -25,7 +25,7 @@ const WorkoutsList = ({workoutPrograms}) => {
                 {
                     workoutPrograms.map((workout,index) => {
                         return (
-                            <li className="workout__list--element" key={index}>
+                            <li className="workout__list--element" key={index} onClick={() => setWorkoutIndex(index)}>
                                 <p className="list__element--name">{workout.workoutName}</p>
                             </li>
                         )

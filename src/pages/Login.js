@@ -9,7 +9,7 @@ import "../pages/login.css";
 import Girl from "../assets/login/girl.png"
 import Logo from "../assets/logoname.svg";
 
-const Login = () => {
+const Login = ({where}) => {
     const { logIn, singInWithGoogle } = useUserAuth();
 
     const [email, setEmail] = useState(null);
@@ -27,7 +27,7 @@ const Login = () => {
         setError(false);
         try {
             await logIn(email, password);
-            navigateTo("/profile")
+            navigateTo(`${where}`)
             setLoading(false);
         } catch(error) {
             setError(error.message);
@@ -40,7 +40,7 @@ const Login = () => {
         setLoadingGoogle(true);
         try {
             await singInWithGoogle();
-            navigateTo("/profile")
+            navigateTo(`${where}`)
             setLoadingGoogle(false)
         } catch(error) {
             setError(error.message);
@@ -113,5 +113,9 @@ const Login = () => {
        </section>
     )
 }
+
+Login.defaultProps = {
+    where: "/profile",
+  }
 
 export default Login;

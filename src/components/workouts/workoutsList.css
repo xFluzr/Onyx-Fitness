@@ -74,7 +74,7 @@
     transform: scale(0.7);
 }
 
-.workout__list--open{
+.workout__list--open-icon{
     display: none;
 }
 
@@ -112,7 +112,7 @@
     .open-workout__list .workout__list--element{
         height: auto;
         font-size: 1rem;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         padding: 1rem 0.75rem;
         opacity: 1;

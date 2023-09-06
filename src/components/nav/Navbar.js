@@ -72,7 +72,7 @@ const Navbar = ({loggedIn}) => {
                             </Link>
                         </li>
                         <li className="list--element">
-                            <Link to={loggedIn ? "/workouts" : "/login"} className="list--link">
+                            <Link to="/workouts" className="list--link">
                                 Workouts
                             </Link>
                         </li>

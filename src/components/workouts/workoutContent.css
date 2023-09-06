@@ -130,3 +130,93 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width: 600px){
+    .workout-content__header,
+    .workout-content__body{
+        padding: 1rem;
+    }
+
+    .workout-content__name{
+        font-size: 1.375rem;
+    }
+
+    .workout-content__excercise--name,
+    .excercise__data--value{
+        font-size: 1rem;
+    }
+
+    .excercise__data--label{
+        font-size: 0.875rem;
+    }
+
+    .excercise__data {
+        padding-right: 1rem;
+    }
+
+    .excercise__data:not(:last-child) {
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 475px){
+    .workout-content__header,
+    .workout-content__body{
+        padding: 0.875rem 0.750rem;
+    }
+
+    .workout-content__number {
+        width: 32px;
+        height: 32px;
+        font-size: 1.125rem;
+    }
+
+    .workout-content__name{
+        font-size: 1.125rem;
+        margin-left: 0.5rem;
+    }
+
+    .workout-content__excercise--name,
+    .excercise__data--value{
+        font-size: 0.875rem;
+    }
+
+    .excercise__data--label,
+    .workout-content__excercise--label{
+        font-size: 0.750rem;
+    }
+
+    .excercise__data {
+        padding-right: 0.750rem;
+    }
+
+    .excercise__data:not(:last-child) {
+        margin-right: 0.750rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .workout-content__excercise{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .excercise__data--box{
+        margin-top: 0.5rem
+    }
+
+    .excercise__data {
+        padding-right: 0;
+        padding: 0 0.5rem;
+    }
+
+    .excercise__data:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .excercise__data:nth-child(2){
+        margin-left: 0.5rem;
+        padding-right: 1rem;
+    }
+}

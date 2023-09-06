@@ -16,8 +16,30 @@
     justify-content: space-between;
 }
 
+.workouts-empty{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 450px;
+    align-items: center;
+    justify-content: center;
+}
+
+.workouts-empty__name{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: var(--light-gray);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
 @media screen and (max-width: 800px) {
     .workouts__layout{
         flex-direction: column;
+    }
+
+    .workouts-empty__name{
+        font-size: 1.250rem;
     }
 }
