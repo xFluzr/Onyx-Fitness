@@ -19,6 +19,7 @@ import { UserAuthContextProvider } from './context/UserAuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import { auth } from "./firebase";
 import ResetPassword from './pages/ResetPassword';
+import Workouts from './pages/Workouts';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -35,7 +36,7 @@ const App = () => {
     <>
       <BrowserRouter>
           <UserAuthContextProvider> 
-            <Navbar loggedIn={loggedIn}/>
+            <Navbar loggedIn={loggedIn} />
               <Routes>
                 <Route path="/" element={<Home />}/>
                 <Route path="/coach/:id" element={<Coach />}/>
@@ -48,6 +49,7 @@ const App = () => {
                 <Route path="/excercise/:id" element={<Excercise />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/workouts" element={<Workouts loggedIn={loggedIn}/>} />
                 <Route path="/profile" 
                       element={
                         <ProtectedRoute loggedIn={loggedIn}>

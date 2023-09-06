@@ -1,0 +1,131 @@
+.workout__list--box{
+    width: 20%;
+}
+
+.workout__list--title{
+    color: var(--light-gray);
+    font-size: 1.250rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.workout__list{
+    margin-top: 1rem;
+    list-style-type: none;
+}
+
+.workout__list--element{
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.750rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.list__element--name{
+    color: var(--background);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* .workout__list--element:nth-child(odd) .list__element--number{
+    background-color: #b2b2b2;
+}
+
+.workout__list--element:nth-child(even) .list__element--number{
+    background-color: #607D8B;
+} */
+
+.workout__list--element:hover{
+    opacity: 0.8;
+}
+
+.workout__list--element:nth-child(even){
+    background-color: #b2b2b2;
+}
+
+.workout__list--element:nth-child(odd){
+    background-color: #607D8B;
+}
+
+.workout__list--button{
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.125rem;
+    border-radius: 0.375rem;
+    padding: 0.875rem 0.750rem;
+    display: block;
+    text-decoration: none;
+    color: var(--background);
+    background-color: var(--purple);
+    transition: all 300ms ease;
+}
+
+.workout__list--button:hover{
+    transform: scale(1.02);
+}
+
+.workout__list--button:active,
+.workout__list--button:focus{
+    transform: scale(0.7);
+}
+
+.workout__list--open-icon{
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .workout__list--open-icon{
+        margin-left: 0.5rem;
+        display: inline-block;
+        font-size: 1.5rem;
+        color: var(--purple);
+    }
+    
+    .workout__list--box{
+        width: 100%;
+    }
+
+    .open-workout__list{
+        transition: height 300ms ease, font-size 200ms 50ms ease-in, padding 300ms ease, margin 300ms ease, opacity 350ms ease;
+    }
+
+    .workout__list{
+        margin-top: 0rem;
+        transition: all 300ms ease;
+    }
+
+    .workout__list--element,
+    .workout__list--button{
+        height: 0;
+        font-size: 0;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        transition: height 300ms ease, font-size 50ms ease-in, padding 300ms ease, margin 300ms ease, opacity 350ms ease;
+    }
+
+    .open-workout__list .workout__list--element{
+        height: auto;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding: 1rem 0.75rem;
+        opacity: 1;
+    }
+
+    .open-workout__list .workout__list--button{
+        height: auto;
+        font-size: 1.125rem;
+        padding: 0.875rem 0.75rem;
+        opacity: 1;
+    }
+
+    .open-workout__list .workout__list{
+        margin-top: 1rem;
+    }
+}

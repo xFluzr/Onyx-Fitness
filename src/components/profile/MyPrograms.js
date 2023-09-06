@@ -12,11 +12,7 @@ const MyPrograms = () => {
     const [haveWorkoutsInDatabase, setHaveWorkoutsInDatabase] = useState(false);
     const { user } = useUserAuth(); 
 
-    console.log("USER DOC ID", userDatabaseDocId);
-
     const workoutsCollectionRef = collection(db, "workoutplans");
-
-    console.log("Workouts:" , workoutPrograms);
 
     const excerciseTemplate = {
         exName: "Excercise",
@@ -112,7 +108,6 @@ const MyPrograms = () => {
         try{
             await addDoc(workoutsCollectionRef, {email: user.email, workouts: stringifiedWorkouts});
             setHaveWorkoutsInDatabase(true);
-            // return;
         } catch(error) {
             console.log("Nie działa dodawanie do bazy gdy nie ma treningów", error.message);
         }
@@ -134,7 +129,7 @@ const MyPrograms = () => {
                 </h1>
                 <div className="my-programs__buttons">
                     <button className="my-programs__save" onClick={handleSaveOrSetWorkouts}>
-                            save changes
+                        save changes
                     </button>
                     <button className="my-programs__add" onClick={handleAddWorkout}>
                         new program +
@@ -154,7 +149,6 @@ const MyPrograms = () => {
                                                      handleAddExcercise={handleAddExcercise}
                                                      handleExcerciseDelete={handleExcerciseDelete}
                                                      handleExcerciseChange={handleExcerciseChange}
-                                                     handleSaveOrSetWorkouts={handleSaveOrSetWorkouts}
                                     />
                         })
                     )
