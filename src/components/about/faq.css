@@ -14,12 +14,13 @@
   margin: 2rem 0;
 }
 .faq__video--box {
-  max-width: 70%;
+  max-width: 56%;
 }
 .questions__wrapper {
   display: flex;
   flex-direction: column;
   gap: 3%;
+  width: 43%;
 }
 
 /*Moblie look*/
@@ -27,10 +28,27 @@
   #faq {
     padding: 2rem 1rem;
   }
+
+  .faq__video--box {
+    max-width: 53%;
+  }
+
+  .questions__wrapper {
+    width: 46%;
+  }
 }
 @media screen and (max-width: 800px) {
   .faq__content {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .faq__video--box {
+    max-width: 100%;
+  }
+
+  .questions__wrapper {
+    width: 100%;
     align-items: center;
   }
 }

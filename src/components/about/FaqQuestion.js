@@ -13,9 +13,9 @@ const FaqQuestion = ({question,answer}) => {
 
   return (
     <div className='question__box'>
-        <div className="question__top">
+        <div className="question__top" onClick={answerHandler}>
             <h3 className='question__title'>{question}</h3>
-            {!showAnswer?<FontAwesomeIcon className="show-answer__icon plus__icon" onClick={answerHandler} icon={faPlus}/>:<FontAwesomeIcon className="show-answer__icon minus__icon" onClick={answerHandler} icon={faMinus}/>}
+            {!showAnswer?<FontAwesomeIcon className="show-answer__icon plus__icon" icon={faPlus}/>:<FontAwesomeIcon className="show-answer__icon minus__icon" icon={faMinus}/>}
         </div>
       <div className='question__body'>
         <p className={`answer__wrapper ${showAnswer?'text__showed':'text__hidden'}`}>{answer}</p>

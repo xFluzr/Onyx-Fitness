@@ -1,64 +1,86 @@
-#landing-about{
-    padding: 1.5rem 3rem;
+#landing-about {
+    padding: 1.5rem 2rem;
 }
-.landing-about__wrapper{
+
+.landing-about__wrapper {
     display: flex;
     justify-content: center;
-    
+    align-items: center;
 }
 
-.landing-about__wrapper .landing__image{
+.landing-about__wrapper .landing__image {
     max-width: 45%;
 }
-.landing-about__wrapper .landing__context{
-   margin-left: 6%;
-}
-.landing__context .section__text{
-    margin: 1.5rem 0;
+
+.landing-about__wrapper .landing__context {
+    margin-left: 6%;
 }
 
-.our__achievements li{
+.landing__context .section__text {
+    margin: 1.5rem 0;
+    text-align: justify;
+}
+
+.our__achievements li {
     display: flex;
     text-decoration: none;
     margin: 1.5rem 0;
     align-items: center;
     justify-content: flex-start;
 }
-.achievement__icon{
+
+.achievement__icon {
     max-width: 4rem;
     margin-right: 3%;
 }
+
+#landing-about .line {
+    margin: 1.5rem 0;
+}
+
 /*MOBILE LOOK*/
 @media screen and (max-width:1024px) {
-    .landing-about__wrapper{
-        padding: 1.25rem 2rem;
+    .landing-about__wrapper {
+        padding: 1.25rem 0;
+    }
+
+    #landing-about .line {
+        margin: 1rem 0;
     }
 }
 
-@media screen and (max-width:800px){
-    .landing-about__wrapper{
+@media screen and (max-width:800px) {
+    .landing-about__wrapper {
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 1rem 1.5rem;
     }
-    .landing-about__wrapper .landing__context{
+
+    .landing-about__wrapper .landing__context {
         margin: 0;
     }
-    .landing-about__wrapper .landing__image{
+
+    .landing-about__wrapper .landing__image {
         order: 2;
         max-width: 90%;
     }
-    .line{
-        width: 100%;
+
+    #landing-about .line {
+        margin: 1rem 0 0.5rem 0;
     }
-    .our__achievements li{
+
+    .our__achievements li {
         justify-content: center;
         text-align: left;
         font-size: .9rem;
     }
-   
-    .achievement__icon{
+
+    .achievement__icon {
         max-width: 3.5rem;
+    }
+
+    .landing__context .section__text {
+        text-align: center;
     }
 }
