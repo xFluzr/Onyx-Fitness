@@ -1,3 +1,7 @@
+#instagram{
+    margin-bottom: 5rem;
+}
+
 .instagram__wrapper{
     display: flex;
     flex-direction: column;
@@ -9,5 +13,11 @@
 
 .instagram__wrapper .heading-pink:hover{
     cursor: not-allowed;
+}
+
+@media screen and (max-width: 800px) {
+    #instagram{
+        margin-bottom: 4rem;
+    }    
 }
 

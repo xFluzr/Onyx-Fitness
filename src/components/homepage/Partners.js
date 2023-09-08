@@ -13,9 +13,7 @@ const Partners = () => {
         <div className='container'>
             <div className='partners__wrapper'>
                 <h2 className='section__title'>
-                    
                     <span className='heading-pink'>Our </span> 
-                    
                     Sponsors</h2>
                 <div className='sponsors__wrapper'>
                     <div className='onyx__sponsor'>
@@ -36,10 +34,9 @@ const Partners = () => {
                     </div>
                     <div className='onyx__sponsor'>
                         <img className='sponsor__image' src={Lotus} alt='boar.com'/>
-                        <h2 className='sponsor__name'>Lotus theraphy</h2>
+                        <h2 className='sponsor__name'>Lotus Yoga</h2>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>

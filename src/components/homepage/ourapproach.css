@@ -1,6 +1,6 @@
 #our-approach{
     text-align: center;
-    margin: 6rem 0 4rem 0;
+    margin: 4rem 0;
 }
 
 .card-list{
@@ -16,10 +16,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-    #our-approach{
-        margin: 2rem 0 2rem 0;
-    }
-
     #our-approach .section__text{
         margin: 1rem auto;
         max-width: 60%;

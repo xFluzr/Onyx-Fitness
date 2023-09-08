@@ -78,7 +78,6 @@
     }
 }
 
-
 @media screen and (max-width:900px) {
     .landing-context{
         top: 5%;
@@ -117,15 +116,51 @@
 
     #landing .btn {
         margin-right: 0.75rem;
-      }
+    }
 }
 
-@media screen and (min-height: 770px) and (max-width:500px) {
+@media screen and (max-width:900px) and (min-height: 900px){
     .landing-action{
         display: flex;
         flex-direction: column;
     }
 
+    #landing .btn {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width:900px) and (min-height: 1100px){
+    .landing-action{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .landing-context{
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%);
+        align-items: center;
+        text-align: center;
+        width: 90%;
+    }
+
+    .landing__image--wrapper{
+        width: 95%;
+        height: 54%;
+        background-position: bottom center;
+        margin: 0;
+    }
+
+    .landing__box{
+        flex-direction: column;
+        height: 94vh;
+        align-items: center;
+    }
+
+    #landing .btn {
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width: 500px){
@@ -146,7 +181,23 @@
     }
 }
 
+@media screen and (max-width:500px) and (min-height: 770px) {
+    .landing-action{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #landing .btn {
+        margin-right: 0;
+    }
+}
+
 @media screen and (max-width:320px){
+    .landing-action{
+        display: flex;
+        flex-direction: column;
+    }
+
     .landing-context{
         top: 2%;
     }
@@ -157,5 +208,9 @@
 
     .landing__image--wrapper{
         height: 45%;
+    }
+
+    #landing .btn {
+        margin-right: 0;
     }
 }

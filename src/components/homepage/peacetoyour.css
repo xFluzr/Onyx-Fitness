@@ -1,10 +1,12 @@
 #peace-to-your{
     height: auto;
     width: 100%;
+    margin-bottom: 5rem;
 }
 .section-wrapper{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 .section-image{
     max-width: 50%;
@@ -16,8 +18,6 @@
     order:2;
 }
 
-
-
 .section-subtitle{
     font-size: 1.75rem;
     color: var(--dark);
@@ -26,7 +26,6 @@
 .line{
     margin: 2rem 0;
 }
-
 
 .instructor-description{
     color:var(--light-gray);
@@ -50,9 +49,10 @@
     text-align: center;
 }
 .advantage-title{
-    font-size: 1.5rem;
+    font-size: 1.250rem;
     color:var(--dark);
 }
+
 .advantage-description{
     font-size: .75rem;
 }
@@ -62,30 +62,47 @@
     margin: auto 0;
 }
 
+#peace-to-your .line {
+    margin: 1rem 0;
+}
+
+#peace-to-your .section__text {
+    text-align: justify;
+}
 
 /* MOBILE LOOK */
 @media screen and (max-width:1024px){
-    .section-image{
-        max-width: 60%;
-        margin: 0 auto;
-        
+    .section-content {
+        padding: 1rem;
     }
-    .section-content{
-        max-width: 100%;
-        text-align:center;
-        display:flex;
-        flex-direction:column;
-        align-items: center;
+
+    #peace-to-your .line {
+        margin: 0.625rem 0;
     }
+
+    .advantage-icon {
+        max-width: 4rem;
+    }
+
+    .advantage-title{
+        font-size: 1.125rem;
+    }
+
+    .yoga-advantages {
+        margin: 1.250rem 0 2rem 0;
+    }
+
     .yoga-advantage{
-        margin:1.5rem auto;
-        justify-content: center;
-        
+        margin: 0.75rem 0;
     }
 }
 
 @media screen and (max-width:800px) {
-   
+    #peace-to-your{
+        height: auto;
+        width: 100%;
+        margin-bottom: 4rem;
+    }
     .section-wrapper{
         flex-direction: column;
         width: 100%;
@@ -96,16 +113,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        order:2;
+        order:1;
+    }
+    #peace-to-your .section__text{
+        max-width: 550px;
+        text-align: center;
     }
     .section-image{
         max-width: 100%;
         padding: 0 6rem;
-        order: 1;
-    }
-    .section-title{
-        text-align: center;
-        font-size: 2rem;
+        order: 2;
     }
     .section-subtitle{
         text-align: center;
@@ -130,5 +147,22 @@
     }
     .advantage-title{
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-image{
+        padding: 0 4rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .section-image{
+        padding: 0 3.5rem;
+    }
+
+    .section-subtitle{
+        text-align: center;
+        font-size: 1.125rem;
     }
 }
