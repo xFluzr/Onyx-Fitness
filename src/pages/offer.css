@@ -1,7 +1,58 @@
-.offer__wrapper{
+#offer{
+    margin: 3rem 0;
+    padding: 0 1rem;
+}
+
+.offer__box{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offer__plans--wrapper{
+    margin-top: 3rem;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    padding: 2rem 4rem;
-    justify-content: center;
-    gap: 1.5rem;
+}
+
+#offer .pricing-card{
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 1024px){
+    .pricing-card__planName {
+        font-size: 1.125rem;
+    }
+
+    #offer .pricing-card__description {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 800px){
+    #offer .pricing-card{
+        width: 49%;
+    }
+
+    #offer{
+        margin: 2rem 0;
+    }
+
+    .offer__plans--wrapper{
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .offer__plans--wrapper{
+        justify-content: center;
+    }
+
+    #offer .pricing-card{
+        width: 100%;
+        max-width: 350px;
+    }
 }
