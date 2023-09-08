@@ -1,10 +1,10 @@
 #pricing{
-    margin-top: 4rem;
+   margin-bottom: 5rem;
 }
 .pricing__box{
-display: flex;
-flex-direction: column;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #pricing .section__title{
     text-align: center;
@@ -17,7 +17,7 @@ align-items: center;
 
 .pricing-cards__list{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 75%;
     margin: 2rem auto;
 }
@@ -25,9 +25,13 @@ align-items: center;
 @media screen and (max-width:1024px) {
     .pricing-cards__list{
         width: 90%;
+        align-items: center;
     }
 }
 @media screen and (max-width: 800px){
+    #pricing{
+        margin-bottom: 4rem;
+     }
     .pricing-cards__list{
         flex-direction: column;
     }

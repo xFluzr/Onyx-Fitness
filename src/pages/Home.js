@@ -19,9 +19,9 @@ const Home = () => {
       <OurApproach/>
       <PeaceToYour/>
       <Joyfull />
-      <Pricing/>
-      <TheNatural />
       <OurCoaches />
+      <TheNatural />
+      <Pricing/>
       <Opinions/>
       <Partners/>
       <Blog/>

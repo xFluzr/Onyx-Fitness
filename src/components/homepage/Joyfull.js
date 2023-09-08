@@ -48,6 +48,7 @@ const Joyfull = () => {
                         />
                     </div>
                     <Button 
+                        allowed="not-allowed"
                         text="See all Courses"
                         link="#"
                     />

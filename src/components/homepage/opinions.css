@@ -1,5 +1,5 @@
 #opinions{
-    margin: 4rem 0;
+    margin-bottom: 5rem;
 }
 
 .line{
@@ -14,7 +14,6 @@
 .opinions__wrapper .section__text{
     width: 50%;
     text-align: center;
-    font-size: .9rem;
 }
 .user__opinions{
     display: flex;
@@ -31,6 +30,9 @@
     
 }
 @media screen and (max-width:800px){
+    #opinions{
+        margin-bottom: 3.5rem;
+    }
     .opinions__wrapper .section__text{
         width: 80%;
     }
