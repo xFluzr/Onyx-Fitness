@@ -1,12 +1,17 @@
-.contact__top{
-    display: flex;
-    padding: 3rem 2rem;
+#contact{
+    padding: 0 1rem;
 }
 
+.contact__top{
+    display: flex;
+    padding: 3rem 0;
+    justify-content: space-between;
+}
 
 /*Mobile look*/
 @media screen and (max-width:800px) {
     .contact__top{
+        padding: 3rem 0 1rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
