@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 49%;
     padding: 2rem 0;
     border-radius: 15px;
     background-color: var(--super-light-purple);
@@ -37,12 +37,13 @@
 .userInfo-form__wrapper .btn{
     margin: 1.5rem 0;
 }
-/*Moblie look*/
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1200px) {
     .userInfo-form__wrapper{
-        width: 50%;
+        width: 48%;
+        padding: 1rem 0;
     }
 }
+/*Moblie look*/
 @media screen and (max-width:800px) {
     .form__title{
         width: 70%;
@@ -53,7 +54,7 @@
        display: none;
     }
     .userInfo-form__wrapper{
-        margin: 3rem 0;
+        margin: 3rem 0 1rem 0;
         width: 100%;
     }
     .userInfo-form__input{
