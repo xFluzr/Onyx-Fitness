@@ -1,7 +1,7 @@
 .pricing-card{
-    margin: 0 1rem;
+    margin: 0;
     border-radius: 15px;
-    width: 28%;
+    width: 31.5%;
     padding: 1.75rem 1.5rem;
     -webkit-box-shadow: 1px 1px 11px -2px rgba(66, 68, 90, 1);
     -moz-box-shadow: 1px 1px 11px -2px rgba(66, 68, 90, 1);
@@ -10,8 +10,7 @@
 }
 
 .pricing-card:hover{
-    transform:translateY(15px);
-  
+    transform:translateY(15px); 
 }
 
 .pricing-card__top{
@@ -103,9 +102,38 @@
 }
 
 /*MOBILE LOOK*/
+@media screen and (max-width:1200px){
+    .pricing-card{
+        padding: 1.75rem 1.250rem;
+    }
+
+    .pricing-card__advantage{
+        font-size: 0.875rem;
+    }    
+}
 
 @media screen and (max-width:1024px){
     .pricing-card__price{
+        font-size:2.25rem;
+    }
+
+    .pricing-card__description{
+        font-size: 1.125rem;
+    }
+
+    .pricing-card__price::before,.pricing-card__price::after{
+        font-size: 1.125rem;
+    }
+
+    .pricing-card__advantage{
+        margin: .75rem 0;
+    } 
+
+    /* .pricing-card{
+        margin: 1rem 1rem;
+        padding: 1.25rem 1.5rem;
+    } */
+    /* .pricing-card__price{
         font-size:2.25rem;
     }
 
@@ -114,7 +142,6 @@
     }
 
     .pricing-card{
-        width: 60%;
         margin: 1rem 1rem;
         padding: 1.25rem 1.5rem;
     }
@@ -125,12 +152,30 @@
 
     .pricing-card__advantage{
         margin: .75rem 0;
-    }
+    } */
 }
+
 @media screen and (max-width: 800px){
     .pricing-card{
-        margin: 1rem auto;
+        width: 60%;
+        margin: 1rem 0;
         padding: 2rem;
+    }
+
+    .pricing-card__price{
+        font-size:2.75rem;
+    }
+
+    .pricing-card__body{
+        margin-top: 1rem;
+    }
+
+    .pricing-card__description{
+        font-size: 1.5rem;
+    }
+
+    .pricing-card__price::before,.pricing-card__price::after{
+        font-size: 1.250rem;
     }
 
     .pricing-card__top{
@@ -138,6 +183,7 @@
     }
 
     .pricing-card__advantage{
+        font-size: 1rem;
         margin: .75rem 0;
     }
 
@@ -146,8 +192,15 @@
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     .pricing-card{
         width: 75%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .pricing-card{
+        width: 75%;
+        padding: 2rem 1.5rem;
     }
 }

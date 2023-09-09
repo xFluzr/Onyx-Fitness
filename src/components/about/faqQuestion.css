@@ -1,11 +1,15 @@
 .question__box {
   padding: 1rem 2rem;
   margin: 0.5rem 0;
-  width: 90%;
+  width: 100%;
   border-radius: 15px;
   -webkit-box-shadow: 1px 1px 11px -2px rgba(66, 68, 90, 1);
   -moz-box-shadow: 1px 1px 11px -2px rgba(66, 68, 90, 1);
   box-shadow: 1px 1px 8px -2px rgba(66, 68, 90, 0.479);
+}
+
+.question__title{
+  text-align: left;
 }
 
 .question__top {
@@ -27,7 +31,7 @@
   cursor: pointer;
 }
 .question__body {
-  width: 80%;
+  width: 100%;
 }
 
 .answer__wrapper {
@@ -38,10 +42,12 @@
 .text__showed {
   margin: 1rem 0;
   opacity: 100;
+  display: block;
   height: auto;
 }
 .text__hidden {
   opacity: 0;
+  display: none;
 }
 /*Mobile look*/
 @media screen and (max-width:1024px){
@@ -51,7 +57,7 @@
 }
 @media screen and (max-width:800px) {
     .question__box{
-        margin: 1rem auto;
-        width: 70%;
+        margin: 1rem 0;
+        width: 90%;
     }
 }

@@ -1,7 +1,7 @@
 .card{
     margin: 2rem 0;
     padding: 0 1rem;
-    width: 18rem ;
+    width: 23%;
     height: 22rem;
     border-radius: 10px;
     display: flex;
@@ -35,28 +35,50 @@
     margin: 1.250rem 0;
 }
 
+@media screen and (max-width:1200px){
+    .card{
+        width:48%;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    .card-title{
+        font-size: 1.625rem;
+    }
+    .card-description{
+        max-width: 400px;
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (max-width:950px) and (min-height: 900px){
+    .card{
+        margin: 0.75rem 0;
+    }
+}
+
+
 @media screen and (max-width:800px) {
     .card{
-        width: 60%;
         margin: 1rem 0;
-        padding: 0 3rem;
-        height: auto;
+        padding: 0 1.5rem;
     }
     .icon{
         width: 5rem;
         height: 5rem;
     }
     .card-title{
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
     .card-description{
-        margin: 1.5rem auto;
-        font-size: 1rem;
+        margin: 1rem auto;
     }
 }
+
 @media screen and (max-width:500px) {
     .card{
-        width: 70%;
+        margin: 0.75rem 0;
+        padding: 0 1rem;
     }
     .icon{
         width: 4rem;
@@ -66,7 +88,19 @@
         font-size: 1.125rem;
     }
     .card-description{
-        margin: 1.125rem auto;
-        font-size: .75rem;
+        margin: 1rem auto;
+        font-size: 0.75rem;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .card{
+        width: 90%;
+        margin: 0.75rem 0;
+    }
+
+    .card-description{
+        max-width: 220px;
     }
 }

@@ -1,5 +1,5 @@
 #joyfull{
-    margin: 2rem 0;
+    margin-bottom: 5rem;
 }
 
 .joyfull__box{
@@ -33,6 +33,10 @@
 }
 
 @media screen and (max-width: 800px) {
+    #joyfull{
+        margin-bottom: 4rem;
+    }
+    
     .joyfull__cards{
         margin-top: 2rem;
         margin-bottom: 1rem;

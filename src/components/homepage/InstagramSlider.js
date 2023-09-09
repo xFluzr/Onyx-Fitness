@@ -60,16 +60,16 @@ const InstagramSlider = () => {
 
   return (
     <Slider {...sliderSettings} className='instagram__slider'>
+        <img src={img7} className='instagram__image' alt='insta7'/>
+        <img src={img8} className='instagram__image' alt='insta8'/>
+        <img src={img9} className='instagram__image' alt='insta9'/>
+        <img src={img10} className='instagram__image' alt='insta10'/>
         <img src={img1} className='instagram__image' alt='insta1'/>
         <img src={img2} className='instagram__image' alt='insta2'/>
         <img src={img3} className='instagram__image' alt='insta3'/>
         <img src={img4} className='instagram__image' alt='insta4'/>
         <img src={img5} className='instagram__image' alt='insta5'/>
         <img src={img6} className='instagram__image' alt='insta6'/>
-        <img src={img7} className='instagram__image' alt='insta7'/>
-        <img src={img8} className='instagram__image' alt='insta8'/>
-        <img src={img9} className='instagram__image' alt='insta9'/>
-        <img src={img10} className='instagram__image' alt='insta10'/>
     </Slider>
   )
 }
