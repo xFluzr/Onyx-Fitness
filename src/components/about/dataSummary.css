@@ -14,7 +14,7 @@
 }
 
 .data__image {
-  max-width: 50%;
+  max-width: 4rem;
 }
 
 .data__title {
@@ -39,6 +39,9 @@
     margin-top: 0.75rem;
     font-size: 2rem;
   }
+.data__image{
+  max-width: 3rem;
+}
   .data__description {
     font-size: 1rem;
   }
@@ -46,6 +49,9 @@
 @media screen and (max-width: 800px) {
   .data__title {
     font-size: 1.5rem;
+  }
+  .data__image{
+    max-width: 2rem;
   }
   .data__description {
     font-size: 0.75rem;
