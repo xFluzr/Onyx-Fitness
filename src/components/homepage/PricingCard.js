@@ -17,30 +17,19 @@ const PricingCard = ({ price, planName, logo, description, additons }) => {
         <p className='pricing-card__description'>{description}</p>
         <ul className='pricing-card__advantages'>
           {/*Klucze planu zamieniane w liste po czym je mapuje,
-                sprawdza czy cos jest danym planie */}
-             {
-                Object.keys(additons).map((key,index)=>{
-                    return <li className='pricing-card__advantage' key={index}>{additons[key]?<FontAwesomeIcon className='checkedIcon' icon={faCheck}/>:<FontAwesomeIcon className='xIcon' icon={faXmark}/>}{key}</li>
-                })             
-            }
-            </ul>
-            <Link className='pricing__button' to="/register">
-              Sign Up
-            </Link>
-            
-           
-        </div>
-          {
-            Object.keys(additons).map((key, index) => {
-              return <li className='pricing-card__advantage' key={index}>{additons[key] ? <FontAwesomeIcon className='checkedIcon' icon={faCheck} /> : <FontAwesomeIcon className='xIcon' icon={faXmark} />}{key}</li>
-            })
-          }
+          sprawdza czy cos jest danym planie */}
+          {Object.keys(additons).map((key, index) => {
+            return <li className='pricing-card__advantage' key={index}>{additons[key] ? <FontAwesomeIcon className='checkedIcon' icon={faCheck} /> : <FontAwesomeIcon className='xIcon' icon={faXmark} />}{key}</li>
+          })}
         </ul>
-        <Link className='pricing__button not-allowed' to="#">
+        <Link className='pricing__button not__allowed' to="#">
           Buy
         </Link>
+
+
       </div>
-    </div>
+   
+      </div>
   )
 }
 
