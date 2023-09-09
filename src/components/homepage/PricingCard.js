@@ -25,7 +25,7 @@ const PricingCard = ({price,planName,logo,description,additons}) => {
                 })             
             }
             </ul>
-            <Link className='pricing__button' to="#">
+            <Link className='pricing__button' to="/register">
               Sign Up
             </Link>
             
