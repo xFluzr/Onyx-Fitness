@@ -28,7 +28,7 @@ const Register = () => {
         if(password !== comfirmPassword){
             setError("Passwords are not the same");
             setLoading(false);
-            return;
+            
         }
 
         try {
@@ -39,6 +39,7 @@ const Register = () => {
             setError(error.message);
             setLoading(false);
         }
+        console.log()
     }
 
     const displayError = (error) => {

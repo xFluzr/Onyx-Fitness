@@ -8,6 +8,7 @@
     display: none;
 }
 
+
 @media screen and (max-width: 800px) {
     .profile__box{
         margin: 1rem 0.5rem 2rem 0.5rem;

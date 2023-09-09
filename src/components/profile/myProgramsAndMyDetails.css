@@ -105,6 +105,19 @@
     justify-content: center;
 }
 
+.gender__box{
+    display: flex;
+    gap: 1rem;
+}
+.details__invalid--hide{
+    display: none;
+}
+.details__invalid--show{
+    display: block;
+    color: red;
+    font-size: 1.1rem
+}
+
 @media screen and (max-width: 1024px) {
     .my-programs__title{
         font-size: 1.250rem;

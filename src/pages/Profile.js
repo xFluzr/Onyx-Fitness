@@ -9,10 +9,20 @@ import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
 
 const Profile = () => {
     const [showPrograms, setShowPrograms] = useState(true);
-
+    const [userInfo, setUserInfo] = useState({
+        nickName:"macius",
+        age:20,
+        weight:50,
+        gender:"",
+        height:150
+    });
+   
     const toggleUserInfo = () => {
         document.body.classList.toggle("user-info-open")
     }
+
+   
+   
 
     const onClickShowPrograms = () => {
         setShowPrograms(true);
@@ -30,12 +40,12 @@ const Profile = () => {
                     <button className="profile__dashbord--button" onClick={toggleUserInfo}>
                         <FontAwesomeIcon className="profile__dashbord--icon" icon={faCaretRight} />
                     </button>
-                    <UserInfo />
+                    <UserInfo userInfo={userInfo} setUserInfo={setUserInfo}/>
                     {
                         showPrograms ? (
                             <MyPrograms />
                         ) : (
-                            <MyDetails />
+                            <MyDetails userInfo={userInfo} setUserInfo={setUserInfo}/>
                         )
                     }
                 </div>
