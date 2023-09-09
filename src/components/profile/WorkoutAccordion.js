@@ -25,7 +25,7 @@ const WorkoutAccordion = ({workout, workoutIndex, handleDeleteWorkout, handleWor
                 <button className='workout__viev' onClick={() => navigateToWorkouts("/workouts")}>view workout</button>
                 <div className='workout__input-name--box'>
                     <label className='workout__name--label'>Workout name:</label>
-                    <input className="workout__name--input" name="workoutName" type="text" value={workout.workoutName} onChange={(e) => handleWorkoutNameChange(e, workoutIndex)} />
+                    <input className="workout__name--input" name="workoutName" type="text" value={workout.workoutName} onChange={(e) => handleWorkoutNameChange(e, workoutIndex)} maxLength={24}/>
                 </div>
                 <div className='excercises__labels--box'>
                     <span className="excercise__label--primary">Excercise name</span>
@@ -39,7 +39,7 @@ const WorkoutAccordion = ({workout, workoutIndex, handleDeleteWorkout, handleWor
                 {workout.excercises.map((excercise, excerciseIndex) => {
                     return (
                         <div className="workout__excercise" key={excerciseIndex}>
-                            <input className='workout__input--primary' name="exName" type="text" value={excercise.exName} onChange={(e) => handleExcerciseChange(workoutIndex, excerciseIndex, e)} />
+                            <input className='workout__input--primary' name="exName" type="text" value={excercise.exName} onChange={(e) => handleExcerciseChange(workoutIndex, excerciseIndex, e)} maxLength={18}/>
                             <div className='excercise__input--box'>
                                 <input className='workout__input' name="sets" type="number" value={excercise.sets} onChange={(e) => handleExcerciseChange(workoutIndex, excerciseIndex, e)} />
                                 <input className='workout__input' name="reps" type="number" value={excercise.reps} onChange={(e) => handleExcerciseChange(workoutIndex, excerciseIndex, e)} />

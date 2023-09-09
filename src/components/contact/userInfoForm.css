@@ -1,6 +1,7 @@
 .userInfo-form__wrapper{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 49%;
     padding: 2rem 0;
@@ -37,6 +38,14 @@
 .userInfo-form__wrapper .btn{
     margin: 1.5rem 0;
 }
+
+.succes__message{
+    font-size: 2rem;
+    color: rgb(0, 148, 0);
+    text-align: center;
+    padding: 12.5rem 0;
+}
+
 @media screen and (max-width: 1200px) {
     .userInfo-form__wrapper{
         width: 48%;

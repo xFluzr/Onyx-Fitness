@@ -31,24 +31,16 @@
     white-space: nowrap;
 }
 
-/* .workout__list--element:nth-child(odd) .list__element--number{
-    background-color: #b2b2b2;
-}
-
-.workout__list--element:nth-child(even) .list__element--number{
-    background-color: #607D8B;
-} */
-
 .workout__list--element:hover{
     opacity: 0.8;
 }
 
 .workout__list--element:nth-child(even){
-    background-color: #b2b2b2;
+    background-color: #c3b7ff;
 }
 
 .workout__list--element:nth-child(odd){
-    background-color: #607D8B;
+    background-color: #a38dff;
 }
 
 .workout__list--button{
