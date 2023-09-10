@@ -35,7 +35,7 @@ const MyPrograms = () => {
         const getWorkoutPrograms = async () => {
             const data = await getDocs(workoutProgramsQuery);
             if(data.empty){
-                console.log("No data for this user");
+                // console.log("No data for this user");
                 return;
             } else {
                 data.forEach((doc) => {

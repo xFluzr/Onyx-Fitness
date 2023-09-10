@@ -19,7 +19,7 @@ const Profile = () => {
         nickName:"DefaultNick",
         age:20,
         weight:75,
-        gender:"man",
+        gender:"",
         height:175
     });
    

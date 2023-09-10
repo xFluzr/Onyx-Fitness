@@ -70,9 +70,10 @@ const Gallery = () => {
         </div>
         {!showModal ? (
           <div className="gallery-images__wrapper">
-            {galleryImages.map((image) => {
+            {galleryImages.map((image, index) => {
               return (
                 <div
+                  key={index}
                   className="img__wrapper"
                   onClick={() => getImage(image.src, image.id)}
                 >

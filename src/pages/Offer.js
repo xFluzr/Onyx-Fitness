@@ -1,7 +1,13 @@
+import React, {useEffect} from 'react';
 import PricingCard from '../components/homepage/PricingCard';
 import './offer.css'
 import { offerSectionPlans } from '../utils/pricingData';
 const Offer = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
     <section id="offer">
       <div className='container'>
