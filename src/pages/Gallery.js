@@ -79,7 +79,7 @@ const Gallery = () => {
                   <img
                     src={image.src}
                     className="image__background"
-                    alt={`image-${image.id}`}
+                    alt={`gallery ${image.id}`}
                     loading="lazy"
                   />
                 </div>

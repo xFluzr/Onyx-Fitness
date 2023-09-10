@@ -62,39 +62,39 @@ const Navbar = ({loggedIn}) => {
                     </figure>
                     <ul className="navbar__list">
                         <li className="list--element">
-                            <Link to="/bmi" className="list--link">
+                            <Link to="/bmi" className="list--link" onClick={toggleMobileMenu}>
                                 Bmi
                             </Link>
                         </li>
                         <li className="list--element">
-                            <Link to="/excercises" className="list--link">
+                            <Link to="/excercises" className="list--link" onClick={toggleMobileMenu}>
                                 Excercises
                             </Link>
                         </li>
                         <li className="list--element">
-                            <Link to="/workouts" className="list--link">
+                            <Link to="/workouts" className="list--link" onClick={toggleMobileMenu}>
                                 Workouts
                             </Link>
                         </li>
                         <li className="list--element">
-                            <Link to="/about" className="list--link">
+                            <Link to="/about" className="list--link" onClick={toggleMobileMenu}>
                                 About us
                             </Link>
                         </li>
                         <li className="list--element">
-                            <Link to="/gallery" className="list--link">
+                            <Link to="/gallery" className="list--link" onClick={toggleMobileMenu}>
                                 Gallery
                             </Link>
                         </li>
                     </ul>
                     <div className="navbar__icon--wrapper">
-                        <Link to={loggedIn ? "/profile" : "/login"} className="icon--link">
+                        <Link to={loggedIn ? "/profile" : "/login"} className="icon--link" onClick={toggleMobileMenu}>
                             <FontAwesomeIcon className="navbar__icon" icon={faUser} />
                         </Link>
-                        <Link to="/contact" className="icon--link">
+                        <Link to="/contact" className="icon--link" onClick={toggleMobileMenu}>
                             <FontAwesomeIcon className="navbar__icon" icon={faPhone} />
                         </Link>
-                        <Link to="/offer" className="navbar__button">
+                        <Link to="/offer" className="navbar__button" onClick={toggleMobileMenu}>
                             Buy Membership
                         </Link>
                     </div>

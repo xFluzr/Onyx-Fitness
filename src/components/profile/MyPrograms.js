@@ -88,8 +88,9 @@ const MyPrograms = () => {
 
     const handleExcerciseChange = (workoutIndex, excerciseIndex, e) => {
         const {name, value} = e.target;
+        let maxThreeDigits = value.slice(0,3)
         let tempWorkout = [...workoutPrograms];
-        tempWorkout[workoutIndex].excercises[excerciseIndex][name] = value; // wybieram trening o indexie (workoutIndex) nastpnie tablicę z ćwiczeniami (excercises) z niej konkretne ćwiczenie o indexie (excerciseIndex) i pole o nazwie z inputa (name) któremu ustawiam wartość (value)
+        tempWorkout[workoutIndex].excercises[excerciseIndex][name] = maxThreeDigits; // wybieram trening o indexie (workoutIndex) nastpnie tablicę z ćwiczeniami (excercises) z niej konkretne ćwiczenie o indexie (excerciseIndex) i pole o nazwie z inputa (name) któremu ustawiam wartość (value)
         setWorkoutPrograms(tempWorkout);
     }
 
