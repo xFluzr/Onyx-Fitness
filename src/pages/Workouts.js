@@ -15,6 +15,10 @@ const Workouts = ({loggedIn}) => {
     const { user } = useUserAuth();
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
+
+    useEffect(() => {
         if(loggedIn){
         const workoutProgramsQuery = query(collection(db, "workoutplans"), where("email", "==", `${user.email}`));
 

@@ -143,7 +143,8 @@ const MyPrograms = () => {
                         <p className="no-program">You have no saved workout program</p>
                     ) : (
                         workoutPrograms.map((workout, workoutIndex) => {
-                            return <WorkoutAccordion workout={workout} 
+                            return <WorkoutAccordion key={workoutIndex}
+                                                     workout={workout} 
                                                      workoutIndex={workoutIndex}
                                                      handleDeleteWorkout={handleDeleteWorkout}
                                                      handleWorkoutNameChange={handleWorkoutNameChange}
