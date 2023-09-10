@@ -33,7 +33,7 @@ const UserInfo = ({userInfo,setUserInfo}) => {
     const getFirebaseUser = async () => {
       const data = await getDocs(usersQuery);
       if (data.empty) {
-        console.log("No users found!");
+        // console.log("No users found!");
         return;
       } else {
         data.forEach((doc) => {
