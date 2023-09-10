@@ -53,7 +53,7 @@ const UserInfo = ({userInfo,setUserInfo}) => {
       <figure className="user-info__img--wrapper">
         <img
           className="user-info__img"
-          src={userInfo?.data?.gender==="man"?Man:Woman}
+          src={userInfo?.data?.gender==="women"?Woman:Man}
           alt="profile"
         />
       </figure>
@@ -62,7 +62,7 @@ const UserInfo = ({userInfo,setUserInfo}) => {
         <UserDetail detail="Age" value={userLoaded ? userInfo?.data.age : "20"} />
         <UserDetail
           detail="Height"
-          value={userLoaded ? userInfo?.data.height : "150"}
+          value={userLoaded ? userInfo?.data.height : "175"}
         />
         <UserDetail
           detail="Weight"

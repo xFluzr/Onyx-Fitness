@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../pages/profile.css";
 import ProfileNavigation from "../components/profile/ProfileNavigation";
 import MyPrograms from "../components/profile/MyPrograms";
@@ -8,21 +8,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons"
 
 const Profile = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
+
     const [showPrograms, setShowPrograms] = useState(true);
+
     const [userInfo, setUserInfo] = useState({
-        nickName:"macius",
+        nickName:"DefaultNick",
         age:20,
-        weight:50,
-        gender:"",
-        height:150
+        weight:75,
+        gender:"man",
+        height:175
     });
    
     const toggleUserInfo = () => {
         document.body.classList.toggle("user-info-open")
     }
-
-   
-   
 
     const onClickShowPrograms = () => {
         setShowPrograms(true);

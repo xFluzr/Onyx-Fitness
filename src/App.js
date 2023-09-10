@@ -23,6 +23,7 @@ import Workouts from './pages/Workouts';
 import NoPage from './pages/NoPage';
 
 const App = () => {
+
   const [loggedIn, setLoggedIn] = useState(false);
 
   auth.onAuthStateChanged((user) => {

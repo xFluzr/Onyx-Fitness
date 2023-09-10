@@ -39,7 +39,7 @@ const Navbar = ({loggedIn}) => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         } 
-    },[lastScrollPosition])
+    },[])
 
     return (
         <>

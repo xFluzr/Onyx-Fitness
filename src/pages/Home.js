@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Landing from '../components/homepage/Landing'
 import OurApproach from '../components/homepage/OurApproach'
 import PeaceToYour from '../components/homepage/PeaceToYour'
@@ -13,6 +13,9 @@ import Blog from '../components/homepage/Blog'
 
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  },[])
   return (
     <>
       <Landing />

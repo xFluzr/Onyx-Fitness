@@ -11,6 +11,10 @@ const Bmi = () => {
     const [bmi, setBmi] = useState(null);
     const [bmiName, setBmiName] = useState(null);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
+
     const calculateBmi = () => {
         let bmiScore = (weight / Math.pow((height / 100),2)).toFixed(2);
 
