@@ -23,7 +23,7 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li className="footer__list--element">
-                                <Link to="/pricing" className="footer__list--link">
+                                <Link to="/offer" className="footer__list--link">
                                     Pricing
                                 </Link>
                             </li>

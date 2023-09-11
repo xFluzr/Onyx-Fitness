@@ -68,6 +68,15 @@ img, video{
     cursor: not-allowed !important;
 }
 
+.green-bg{
+    background-color: #009705 !important;
+    border-color: #009705 !important;
+}
+
+.green-bg:hover{
+    color: var(--background) !important;
+}
+
 @media screen and (max-width: 1024px) {
     .section__title{
         font-size: 2rem;

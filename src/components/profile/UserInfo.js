@@ -1,72 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../profile/userInfo.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import { useUserAuth } from "../../context/UserAuthContext";
-import { db } from "../../firebase";
-import {
-  collection,
-  query,
-  where,
-  getDocs
-} from "firebase/firestore";
 
 import Woman from "../../assets/profile/woman.png";
 import Man from "../../assets/profile/man.png";
 import UserDetail from "./UserDetail";
+import { useUserAuth } from "../../context/UserAuthContext";
 
-const UserInfo = ({userInfo,setUserInfo}) => {
+const UserInfo = ({userInfo, userLoaded, update}) => {
+
   const { user } = useUserAuth();
-  const [userLoaded, setUserLoaded] = useState(false);
+  let temporaryNickaname = user.email.split("@")[0].slice(0,12);
 
   const toggleUserInfo = async () => {
     document.body.classList.toggle("user-info-open");
   };
 
-  useEffect(() => {
-    
-    const usersQuery = query(
-      collection(db, "users"),
-      where("email", "==", `${user.email}`)
-    );
-
-    const getFirebaseUser = async () => {
-      const data = await getDocs(usersQuery);
-      if (data.empty) {
-        // console.log("No users found!");
-        return;
-      } else {
-        data.forEach((doc) => {
-          setUserInfo({
-            data: doc.data(),
-            id: doc.id,
-          });
-        });
-        setUserLoaded(true);
-        
-      }
-    };
-    getFirebaseUser();
-  }, [userLoaded,userInfo]);
   return (
-    <section id="user-info">
+    <section id="user-info" update={update}>
       <figure className="user-info__img--wrapper">
         <img
           className="user-info__img"
-          src={userInfo?.data?.gender==="women"?Woman:Man}
+          src={userInfo?.gender==="women"?Woman:Man}
           alt="profile"
         />
       </figure>
       <div className="user-info__box">
-        <p className="user-info__name">{userLoaded? userInfo?.data?.nickName:"DefaultNick"}</p>
-        <UserDetail detail="Age" value={userLoaded ? userInfo?.data.age : "20"} />
+        <p className="user-info__name">{userLoaded? userInfo?.nickName : temporaryNickaname}</p>
+        <UserDetail detail="Age" value={userLoaded ? userInfo?.age : "20"} />
         <UserDetail
           detail="Height"
-          value={userLoaded ? userInfo?.data.height : "175"}
+          value={userLoaded ? userInfo?.height : "175"}
         />
         <UserDetail
           detail="Weight"
-          value={userLoaded ? userInfo?.data.weight : "80"}
+          value={userLoaded ? userInfo?.weight : "80"}
         />
       </div>
       <FontAwesomeIcon

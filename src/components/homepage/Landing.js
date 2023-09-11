@@ -20,7 +20,7 @@ const Landing = () => {
               <br /> don't wait the perfect time to start is now
             </p>
             <div className="landing-action">
-              <Button text="Get Started" link="/login" />
+              <Button text="Get Started" link="/profile" />
               <Button text="Read More" isBackground={false} link="/about" />
             </div>
           </div>
