@@ -10,6 +10,7 @@ const MyPrograms = () => {
     const [workoutPrograms, setWorkoutPrograms] = useState([]);
     const [userDatabaseDocId, setUserDatabaseDocId] = useState("");
     const [haveWorkoutsInDatabase, setHaveWorkoutsInDatabase] = useState(false);
+    const [saved, setSaved] = useState(false);
     const { user } = useUserAuth(); 
 
     const workoutsCollectionRef = collection(db, "workoutplans");
@@ -88,9 +89,14 @@ const MyPrograms = () => {
 
     const handleExcerciseChange = (workoutIndex, excerciseIndex, e) => {
         const {name, value} = e.target;
-        let maxThreeDigits = value.slice(0,3)
+        let maxValueDigits = value
+        if(name === "exName") {
+            maxValueDigits = value.slice(0,16)
+        } else {
+            maxValueDigits = value.slice(0,3)
+        }
         let tempWorkout = [...workoutPrograms];
-        tempWorkout[workoutIndex].excercises[excerciseIndex][name] = maxThreeDigits; // wybieram trening o indexie (workoutIndex) nastpnie tablicę z ćwiczeniami (excercises) z niej konkretne ćwiczenie o indexie (excerciseIndex) i pole o nazwie z inputa (name) któremu ustawiam wartość (value)
+        tempWorkout[workoutIndex].excercises[excerciseIndex][name] = maxValueDigits; // wybieram trening o indexie (workoutIndex) nastpnie tablicę z ćwiczeniami (excercises) z niej konkretne ćwiczenie o indexie (excerciseIndex) i pole o nazwie z inputa (name) któremu ustawiam wartość (value)
         setWorkoutPrograms(tempWorkout);
     }
 
@@ -99,6 +105,7 @@ const MyPrograms = () => {
         const stringifiedWorkouts = JSON.stringify(workoutPrograms);
         try {
             await updateDoc(userDoc, {workouts: stringifiedWorkouts});
+            setSaved(true);
         } catch(error) {
             console.log("Nie udało się zaktualizować treningów w bazie", error.message);
         }
@@ -108,6 +115,7 @@ const MyPrograms = () => {
         const stringifiedWorkouts = JSON.stringify(workoutPrograms);
         try{
             await addDoc(workoutsCollectionRef, {email: user.email, workouts: stringifiedWorkouts});
+            setSaved(true);
             setHaveWorkoutsInDatabase(true);
         } catch(error) {
             console.log("Nie działa dodawanie do bazy gdy nie ma treningów", error.message);
@@ -122,6 +130,14 @@ const MyPrograms = () => {
         }
     }
 
+    useEffect(()=> {
+        const restoreButton = setTimeout(() => {
+            setSaved(false);
+        },3000)
+
+        return() => clearTimeout(restoreButton);
+    },[saved])
+
     return (
         <section id="my-programs">
             <div className="my-programs__header">
@@ -129,8 +145,8 @@ const MyPrograms = () => {
                     Programs I have created
                 </h1>
                 <div className="my-programs__buttons">
-                    <button className="my-programs__save" onClick={handleSaveOrSetWorkouts}>
-                        save changes
+                    <button className={`my-programs__save ${saved && "green-bg"}`} onClick={handleSaveOrSetWorkouts}>
+                        {saved ? "changes saved" : "save changes" }
                     </button>
                     <button className="my-programs__add" onClick={handleAddWorkout}>
                         new program +

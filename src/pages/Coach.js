@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../pages/coach.css";
 import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,6 +9,10 @@ import coachesData from "../utils/coachesData";
 const Coach = () => {
 
     const { id } = useParams();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     // Searching in coaches data for exact coach with id from param
     const coach = coachesData.find((coach) => coach.link === id);
