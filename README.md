@@ -1,2 +1,17 @@
-# Onyx-Fitness
-Our gym was created out of passion for a healthy lifestyle and sport. We wanted to create a place where everyone could fully develop their body and mind, regardless of age or level of advancement. Therefore, our offer is addressed to everyone - from beginners who are just starting their adventure with sport to experienced players.
+# Onyx-Fitness - Gym website - Crud Aplication
+
+Created by:
+ - Grzegorz Szerszeń (NadmorskaAlpaka)
+ - Jakub Jaszcz (xFluzr)
+
+Used languages and technologies
+  - React
+  - CSS
+  - Firebase
+  - Rapid API
+
+Main features:
+  - Login and register functionality.
+  - Loged user can creat, edit, delete, update, display a workout plan.
+  - BMI calculator.
+  - Excercise Wiki (API), displaying excercises list, searchin, filtering, displaying more information about excercise.
