@@ -11,7 +11,7 @@ const Gallery = () => {
   const [showModal, setShowModal] = useState(false);
   const [tempSrc, setTempSrc] = useState("");
   let [tempImgId, setTempImgId] = useState(0);
-  //Getting the image which was clicked and displaying in the modal
+  //Getting the image which was clicked and displaying it in the modal
   const getImage = (imgSrc, imgId) => {
     setTempSrc(imgSrc);
     setTempImgId(imgId);
@@ -20,7 +20,7 @@ const Gallery = () => {
 
   const getPreviousImg = () => {
     if (tempImgId > 0) {
-      setTempImgId((tempImgId -= 1));
+      setTempImgId(prev=>prev- 1);
       galleryImages.filter((image) => {
         if (image.id === tempImgId) {
           setTempSrc(image.src);
@@ -32,7 +32,7 @@ const Gallery = () => {
   };
   const getNextImg = () => {
     if (tempImgId < galleryImages.length) {
-      setTempImgId((tempImgId += 1));
+      setTempImgId(prev=>prev+ 1);
       galleryImages.filter((image) => {
         if (image.id === tempImgId) {
           setTempSrc(image.src);
@@ -42,6 +42,7 @@ const Gallery = () => {
       setTempImgId(1);
     }
   };
+
   return (
     <section id="gallery" className={`${showModal ? "lock-scroll" : ""}`}>
       <div className="container">
