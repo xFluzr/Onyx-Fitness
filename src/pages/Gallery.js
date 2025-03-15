@@ -18,29 +18,25 @@ const Gallery = () => {
     setShowModal(true);
   };
 
-  const getPreviousImg = () => {
-    if (tempImgId > 0) {
-      setTempImgId(prev=>prev- 1);
-      galleryImages.filter((image) => {
-        if (image.id === tempImgId) {
-          setTempSrc(image.src);
-        }
-      });
-    } else {
-      setTempImgId(galleryImages.length);
-    }
+ const getPreviousImg = () => {
+    setTempImgId((prev) => {
+      const prevId = prev > 1 ? prev - 1 : galleryImages.length;
+      const prevImage = galleryImages.find(image => image.id === prevId);
+      if (prevImage) {
+        setTempSrc(prevImage.src);
+      }
+      return prevId;
+    });
   };
   const getNextImg = () => {
-    if (tempImgId < galleryImages.length) {
-      setTempImgId(prev=>prev+ 1);
-      galleryImages.filter((image) => {
-        if (image.id === tempImgId) {
-          setTempSrc(image.src);
-        }
-      });
-    } else {
-      setTempImgId(1);
-    }
+    setTempImgId((prev) => {
+      const nextId = prev < galleryImages.length ? prev + 1 : 1;
+      const nextImage = galleryImages.find(image => image.id === nextId);
+      if (nextImage) {
+        setTempSrc(nextImage.src);
+      }
+      return nextId;
+    });
   };
 
   return (
